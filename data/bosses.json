@@ -14,7 +14,6 @@
 		"skills": {
 			"name": "Stompquake",
 			"description": "AoE that stuns frontline.",
-			"mpCost": 0,
 			"cooldown": 0
 		}
 	},
@@ -33,7 +32,6 @@
 		"skills": {
 			"name": "Frozen Avalanche",
 			"description": "AoE + Freeze chance.",
-			"mpCost": 0,
 			"cooldown": 0
 		}
 	},
@@ -52,7 +50,6 @@
 		"skills": {
 			"name": "Temporal Rift",
 			"description": "Delays enemy actions.",
-			"mpCost": 0,
 			"cooldown": 0
 		}
 	},
@@ -71,7 +68,6 @@
 		"skills": {
 			"name": "Bone Storm",
 			"description": "Hits all enemies and summons skeletons.",
-			"mpCost": 0,
 			"cooldown": 0
 		}
 	},
@@ -90,7 +86,6 @@
 		"skills": {
 			"name": "Hellfire Wave",
 			"description": "AoE fire damage + Burn.",
-			"mpCost": 0,
 			"cooldown": 0
 		}
 	}
