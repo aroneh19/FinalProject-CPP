@@ -1,182 +1,192 @@
 [
 	{
-    "name": "Archer",
-    "affinity": "Lightning",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 160,
-      "atk": 17,
-      "def": 7,
-      "spd": 15,
-      "lck": 11
-    },
-    "skills": {
-      "name": "Double Shot",
-      "description": "Two random hits.",
-      "cooldown": 0
-    }
-  },
+		"name": "Archer",
+		"description": "A swift and agile hunter who excels at striking from a distance. Her arrows rain down on enemies with precision and speed, targeting multiple foes at once.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 160,
+			"atk": 17,
+			"def": 7,
+			"spd": 15,
+			"lck": 11
+		},
+		"skills": {
+			"name": "Double Shot",
+			"description": "Two random hits.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Mage",
-    "affinity": "Lightning",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 140,
-      "atk": 20,
-      "def": 5,
-      "spd": 12,
-      "lck": 10
-    },
-    "skills": {
-      "name": "Arcane Storm",
-      "description": "AoE magic blast.",
-      "cooldown": 0
-    }
-  },
+		"name": "Mage",
+		"description": "A scholarly master of the arcane arts, wielding volatile lightning magic to devastate groups of enemies. Fragile, but devastating when protected.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 140,
+			"atk": 20,
+			"def": 5,
+			"spd": 12,
+			"lck": 10
+		},
+		"skills": {
+			"name": "Arcane Storm",
+			"description": "AoE magic blast.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Healer",
-    "affinity": "Water",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 150,
-      "atk": 6,
-      "def": 6,
-      "spd": 10,
-      "lck": 17
-    },
-    "skills": {
-      "name": "Divine Light",
-      "description": "Restores HP to one ally.",
-      "cooldown": 0
-    }
-  },
+		"name": "Healer",
+		"description": "A serene and wise support unit, channeling calming waters to mend wounds and keep allies on their feet in the heat of battle.",
+		"affinity": "Water",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 150,
+			"atk": 6,
+			"def": 6,
+			"spd": 10,
+			"lck": 17
+		},
+		"skills": {
+			"name": "Divine Light",
+			"description": "Restores HP to one ally.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Assassin",
-    "affinity": "Ice",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 130,
-      "atk": 16,
-      "def": 4,
-      "spd": 20,
-      "lck": 18
-    },
-    "skills": {
-      "name": "Shadow Step",
-      "description": "Ignores frontline, high crit chance.",
-      "cooldown": 0
-    }
-  },
+		"name": "Assassin",
+		"description": "A deadly and elusive killer, dancing through the shadows to eliminate targets behind enemy lines with surgical precision and critical strikes.",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 130,
+			"atk": 16,
+			"def": 4,
+			"spd": 20,
+			"lck": 18
+		},
+		"skills": {
+			"name": "Shadow Step",
+			"description": "Ignores frontline, high crit chance.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Druid",
-    "affinity": "Water",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 170,
-      "atk": 8,
-      "def": 10,
-      "spd": 11,
-      "lck": 14
-    },
-    "skills": {
-      "name": "Rejuvenation",
-      "description": "Heal over time for all allies.",
-      "cooldown": 0
-    }
-  },
+		"name": "Druid",
+		"description": "A guardian of nature, using water-infused rituals to restore vitality to the entire party. Durable for a support, with surprising resilience.",
+		"affinity": "Water",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 170,
+			"atk": 8,
+			"def": 10,
+			"spd": 11,
+			"lck": 14
+		},
+		"skills": {
+			"name": "Rejuvenation",
+			"description": "Heal over time for all allies.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Pyromancer",
-    "affinity": "Fire",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 150,
-      "atk": 19,
-      "def": 6,
-      "spd": 11,
-      "lck": 10
-    },
-    "skills": {
-      "name": "Inferno",
-      "description": "Burn damage over 3 turns.",
-      "cooldown": 0
-    }
-  },
+		"name": "Pyromancer",
+		"description": "A volatile spellcaster who thrives on chaos. Her flames engulf enemies over time, creating panic and relentless pressure on enemy lines.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 150,
+			"atk": 19,
+			"def": 6,
+			"spd": 11,
+			"lck": 10
+		},
+		"skills": {
+			"name": "Inferno",
+			"description": "Burn damage over 3 turns.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Ice Witch",
-    "affinity": "Ice",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 140,
-      "atk": 16,
-      "def": 5,
-      "spd": 10,
-      "lck": 13
-    },
-    "skills": {
-      "name": "Frostbind",
-      "description": "Chance to freeze backline target.",
-      "cooldown": 0
-    }
-  },
+		"name": "Ice Witch",
+		"description": "Cold and calculated, she bends frost to her will, binding enemies in place with chilling spells that freeze their actions and nerves alike.",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 140,
+			"atk": 16,
+			"def": 5,
+			"spd": 10,
+			"lck": 13
+		},
+		"skills": {
+			"name": "Frostbind",
+			"description": "Chance to freeze backline target.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Warlock",
-    "affinity": "Fire",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 150,
-      "atk": 12,
-      "def": 7,
-      "spd": 9,
-      "lck": 14
-    },
-    "skills": {
-      "name": "Curse of Weakness",
-      "description": "Debuff enemy ATK.",
-      "cooldown": 0
-    }
-  },
+		"name": "Warlock",
+		"description": "A dark scholar who curses from afar, weakening enemies with infernal whispers. Not one for brute strength, but dangerous over time.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 150,
+			"atk": 12,
+			"def": 7,
+			"spd": 9,
+			"lck": 14
+		},
+		"skills": {
+			"name": "Curse of Weakness",
+			"description": "Debuff enemy ATK.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Bard",
-    "affinity": "Lightning",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 160,
-      "atk": 9,
-      "def": 9,
-      "spd": 13,
-      "lck": 16
-    },
-    "skills": {
-      "name": "Battle Hymn",
-      "description": "Boost SPD for team for 2 turns.",
-      "cooldown": 0
-    }
-  },
+		"name": "Bard",
+		"description": "A musical tactician who empowers allies with magical melodies. Their songs boost morale and speed, turning the tide of battle with rhythm.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 160,
+			"atk": 9,
+			"def": 9,
+			"spd": 13,
+			"lck": 16
+		},
+		"skills": {
+			"name": "Battle Hymn",
+			"description": "Boost SPD for team for 2 turns.",
+			"cooldown": 0
+		}
+	},
 	{
-    "name": "Sniper",
-    "affinity": "Lightning",
-    "icon": "",
-    "role": "",
-    "stats": {
-      "hp": 150,
-      "atk": 18,
-      "def": 6,
-      "spd": 14,
-      "lck": 15
-    },
-    "skills": {
-      "name": "Headshot",
-      "description": "High crit, chance to instantly KO weak targets.",
-      "cooldown": 0
-    }
-  }
+		"name": "Sniper",
+		"description": "A lone wolf with unshakable aim, trained to spot and eliminate vulnerable targets with deadly accuracy. A single shot can end a fight before it begins.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 150,
+			"atk": 18,
+			"def": 6,
+			"spd": 14,
+			"lck": 15
+		},
+		"skills": {
+			"name": "Headshot",
+			"description": "High crit, chance to instantly KO weak targets.",
+			"cooldown": 0
+		}
+	}
 ]
