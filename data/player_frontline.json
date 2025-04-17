@@ -1,76 +1,76 @@
 [
 	{
-		"name": "Paladin",
-		"affinity": "Lightning",
-		"icon": "",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Divine Shield",
-			"description": "Reduces damage taken for 2 turns.",
-			"cooldown": 0
-		}
-	},
+    "name": "Paladin",
+    "affinity": "Lightning",
+    "icon": "",
+    "role": "",
+    "stats": {
+      "hp": 280,
+      "atk": 10,
+      "def": 18,
+      "spd": 6,
+      "lck": 6
+    },
+    "skills": {
+      "name": "Divine Shield",
+      "description": "Reduces damage taken for 2 turns.",
+      "cooldown": 0
+    }
+  },
 	{
-		"name": "Knight",
-		"affinity": "Earth",
-		"icon": "",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Shield Bash",
-			"description": "Attacks + chance to stun.",
-			"cooldown": 0
-		}
-	},
+    "name": "Knight",
+    "affinity": "Earth",
+    "icon": "",
+    "role": "",
+    "stats": {
+      "hp": 260,
+      "atk": 12,
+      "def": 17,
+      "spd": 7,
+      "lck": 4
+    },
+    "skills": {
+      "name": "Shield Bash",
+      "description": "Attacks + chance to stun.",
+      "cooldown": 0
+    }
+  },
 	{
-		"name": "Berserker",
-		"affinity": "Fire",
-		"icon": "",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Rage Strike",
-			"description": "Deals more damage as HP lowers.",
-			"cooldown": 0
-		}
-	},
+    "name": "Berserker",
+    "affinity": "Fire",
+    "icon": "",
+    "role": "",
+    "stats": {
+      "hp": 220,
+      "atk": 18,
+      "def": 10,
+      "spd": 10,
+      "lck": 8
+    },
+    "skills": {
+      "name": "Rage Strike",
+      "description": "Deals more damage as HP lowers.",
+      "cooldown": 0
+    }
+  },
 	{
-		"name": "Monk",
-		"affinity": "Lightning",
-		"icon": "",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Chi Barrier",
-			"description": "Buff DEF for the whole team.",
-			"cooldown": 0
-		}
-	},
+    "name": "Monk",
+    "affinity": "Lightning",
+    "icon": "",
+    "role": "",
+    "stats": {
+      "hp": 230,
+      "atk": 14,
+      "def": 12,
+      "spd": 13,
+      "lck": 10
+    },
+    "skills": {
+      "name": "Chi Barrier",
+      "description": "Buff DEF for the whole team.",
+      "cooldown": 0
+    }
+  },
 	{
 		"name": "Iron Golem",
 		"affinity": "Earth",
