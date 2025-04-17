@@ -1,0 +1,35 @@
+{
+    "affinities": [
+      {
+        "name": "Holy",
+        "icon": "✨",
+        "strongAgainst": "Dark",
+        "weakAgainst": "Fire"
+      },
+      {
+        "name": "Fire",
+        "icon": "🔥",
+        "strongAgainst": "Nature",
+        "weakAgainst": "Water"
+      },
+      {
+        "name": "Nature",
+        "icon": "🍃",
+        "strongAgainst": "Earth",
+        "weakAgainst": "Fire"
+      },
+      {
+        "name": "Earth",
+        "icon": "🪨",
+        "strongAgainst": "Arcane",
+        "weakAgainst": "Nature"
+      },
+      {
+        "name": "Dark",
+        "icon": "🌑",
+        "strongAgainst": "Holy",
+        "weakAgainst": "Holy"
+      }
+    ]
+  }
+  

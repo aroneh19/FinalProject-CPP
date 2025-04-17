@@ -1,0 +1,182 @@
+[
+	{
+		"name": "Archer",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Double Shot",
+			"description": "Two random hits.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Mage",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Arcane Storm",
+			"description": "AoE magic blast.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Healer",
+		"affinity": "Water",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Divine Light",
+			"description": "Restores HP to one ally.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Assassin",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Shadow Step",
+			"description": "Ignores frontline, high crit chance.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Druid",
+		"affinity": "Water",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Rejuvenation",
+			"description": "Heal over time for all allies.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Pyromancer",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Inferno",
+			"description": "Burn damage over 3 turns.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Ice Witch",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Frostbind",
+			"description": "Chance to freeze backline target.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Warlock",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Curse of Weakness",
+			"description": "Debuff enemy ATK.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Bard",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Battle Hymn",
+			"description": "Boost SPD for team for 2 turns.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Sniper",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Headshot",
+			"description": "High crit, chance to instantly KO weak targets.",
+			"cooldown": 0
+		}
+	}
+]
