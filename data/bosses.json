@@ -1,97 +1,97 @@
 [
-    {
-        "name": "Troll Warlord",
-        "role": "",
-        "affinity": "",
-        "icon": "",
-        "stats": {
-            "hp": 0,
-            "atk": 0,
-            "def": 0,
-            "spd": 0,
-            "lck": 0
-        },
-        "skills": {
-            "name": "",
-            "description": "",
-            "mpCost": 0,
-            "cooldown": 0
-        }
-    },
-    {
-        "name": "Frost Giant",
-        "role": "",
-        "affinity": "",
-        "icon": "",
-        "stats": {
-            "hp": 0,
-            "atk": 0,
-            "def": 0,
-            "spd": 0,
-            "lck": 0
-        },
-        "skills": {
-            "name": "",
-            "description": "",
-            "mpCost": 0,
-            "cooldown": 0
-        }
-    },
-    {
-        "name": "Arcane Sentinel",
-        "role": "",
-        "affinity": "",
-        "icon": "",
-        "stats": {
-            "hp": 0,
-            "atk": 0,
-            "def": 0,
-            "spd": 0,
-            "lck": 0
-        },
-        "skills": {
-            "name": "",
-            "description": "",
-            "mpCost": 0,
-            "cooldown": 0
-        }
-    },
-    {
-        "name": "Undead Dragon",
-        "role": "",
-        "affinity": "",
-        "icon": "",
-        "stats": {
-            "hp": 0,
-            "atk": 0,
-            "def": 0,
-            "spd": 0,
-            "lck": 0
-        },
-        "skills": {
-            "name": "",
-            "description": "",
-            "mpCost": 0,
-            "cooldown": 0
-        }
-    },
-    {
-        "name": "Demon Lord",
-        "role": "",
-        "affinity": "",
-        "icon": "",
-        "stats": {
-            "hp": 0,
-            "atk": 0,
-            "def": 0,
-            "spd": 0,
-            "lck": 0
-        },
-        "skills": {
-            "name": "",
-            "description": "",
-            "mpCost": 0,
-            "cooldown": 0
-        }
-    }
+	{
+		"name": "Troll Warlord",
+		"role": "",
+		"affinity": "Earth",
+		"icon": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Stompquake",
+			"description": "AoE that stuns frontline.",
+			"mpCost": 0,
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Frost Giant",
+		"role": "",
+		"affinity": "Ice",
+		"icon": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Frozen Avalanche",
+			"description": "AoE + Freeze chance.",
+			"mpCost": 0,
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Arcane Sentinel",
+		"role": "",
+		"affinity": "Lightning",
+		"icon": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Temporal Rift",
+			"description": "Delays enemy actions.",
+			"mpCost": 0,
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Undead Dragon",
+		"role": "",
+		"affinity": "Ice",
+		"icon": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Bone Storm",
+			"description": "Hits all enemies and summons skeletons.",
+			"mpCost": 0,
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Demon Lord",
+		"role": "",
+		"affinity": "Fire",
+		"icon": "",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Hellfire Wave",
+			"description": "AoE fire damage + Burn.",
+			"mpCost": 0,
+			"cooldown": 0
+		}
+	}
 ]

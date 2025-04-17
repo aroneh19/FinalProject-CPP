@@ -1,0 +1,39 @@
+{
+	"affinities": [
+		{
+			"name": "Fire",
+			"code": "FIR",
+			"icon": "🔥",
+			"strong_against": "ICE",
+			"weak_against": "WTR"
+		},
+		{
+			"name": "Water",
+			"code": "WTR",
+			"icon": "🌊",
+			"strong_against": "FIR",
+			"weak_against": "ERT"
+		},
+		{
+            "name": "Lightning",
+			"code": "LGT",
+			"icon": "⚡",
+			"strong_against": "WTR",
+			"weak_against": "ICE"
+		},
+        {
+            "name": "Earth",
+            "code": "ERT",
+            "icon": "🪨",
+            "strong_against": "LGT",
+            "weak_against": "ICE"
+        },
+		{
+			"name": "Ice",
+			"code": "ICE",
+			"icon": "❄️",
+			"strong_against": "ERT",
+			"weak_against": "FIR"
+		}
+	]
+}
