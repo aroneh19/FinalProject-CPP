@@ -3,7 +3,7 @@
 		"name": "Archer",
 		"description": "A swift and agile hunter who excels at striking from a distance. Her arrows rain down on enemies with precision and speed, targeting multiple foes at once.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🏹",
 		"role": "B",
 		"stats": {
 			"hp": 160,
@@ -22,7 +22,7 @@
 		"name": "Assassin",
 		"description": "A deadly and elusive killer, dancing through the shadows to eliminate targets behind enemy lines with surgical precision and critical strikes.",
 		"affinity": "Ice",
-		"icon": "",
+		"icon": "🗡️",
 		"role": "B",
 		"stats": {
 			"hp": 130,
@@ -41,7 +41,7 @@
 		"name": "Bard",
 		"description": "A musical tactician who empowers allies with magical melodies. Their songs boost morale and speed, turning the tide of battle with rhythm.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🎵",
 		"role": "B",
 		"stats": {
 			"hp": 160,
@@ -60,7 +60,7 @@
 		"name": "Berserker",
 		"description": "A ferocious warrior who channels fire into fury. The lower his health, the deadlier his rampage becomes—unpredictable and unstoppable.",
 		"affinity": "Fire",
-		"icon": "",
+		"icon": "💪",
 		"role": "F",
 		"stats": {
 			"hp": 220,
@@ -79,7 +79,7 @@
 		"name": "Demonbound",
 		"description": "A cursed soul wrapped in flame, the Demonbound slices through defenses with dark fire, fueled by forbidden power.",
 		"affinity": "Fire",
-		"icon": "",
+		"icon": "👹",
 		"role": "F",
 		"stats": {
 			"hp": 0,
@@ -98,7 +98,7 @@
 		"name": "Druid",
 		"description": "A guardian of nature, using water-infused rituals to restore vitality to the entire party. Durable for a support, with surprising resilience.",
 		"affinity": "Water",
-		"icon": "",
+		"icon": "🍃",
 		"role": "B",
 		"stats": {
 			"hp": 170,
@@ -117,7 +117,7 @@
 		"name": "Frost Knight",
 		"description": "A disciplined warrior of ice whose armor deflects critical hits. Cold and composed, the Frost Knight slows battles to a crawl.",
 		"affinity": "Ice",
-		"icon": "",
+		"icon": "🧿 ",
 		"role": "F",
 		"stats": {
 			"hp": 0,
@@ -136,7 +136,7 @@
 		"name": "Gladiator",
 		"description": "A fiery brawler forged in the arena. The Gladiator excels in brute force, battering the frontline and leaving enemies bleeding.",
 		"affinity": "Fire",
-		"icon": "",
+		"icon": "🪓",
 		"role": "F",
 		"stats": {
 			"hp": 0,
@@ -155,7 +155,7 @@
 		"name": "Healer",
 		"description": "A serene and wise support unit, channeling calming waters to mend wounds and keep allies on their feet in the heat of battle.",
 		"affinity": "Water",
-		"icon": "",
+		"icon": "✨",
 		"role": "B",
 		"stats": {
 			"hp": 150,
@@ -174,7 +174,7 @@
 		"name": "Ice Witch",
 		"description": "Cold and calculated, she bends frost to her will, binding enemies in place with chilling spells that freeze their actions and nerves alike.",
 		"affinity": "Ice",
-		"icon": "",
+		"icon": "🧊",
 		"role": "B",
 		"stats": {
 			"hp": 140,
@@ -193,7 +193,7 @@
 		"name": "Iron Golem",
 		"description": "A towering earthen construct of raw defense and slow devastation. Its mighty slams shake the ground and pulverize enemies.",
 		"affinity": "Earth",
-		"icon": "",
+		"icon": "🔩",
 		"role": "F",
 		"stats": {
 			"hp": 0,
@@ -212,7 +212,7 @@
 		"name": "Knight",
 		"description": "A stalwart defender rooted in the earth, the Knight excels at stunning foes and holding the front with honor-bound discipline.",
 		"affinity": "Earth",
-		"icon": "",
+		"icon": "⚔️",
 		"role": "F",
 		"stats": {
 			"hp": 260,
@@ -231,7 +231,7 @@
 		"name": "Mage",
 		"description": "A scholarly master of the arcane arts, wielding volatile lightning magic to devastate groups of enemies. Fragile, but devastating when protected.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🔮",
 		"role": "B",
 		"stats": {
 			"hp": 140,
@@ -250,7 +250,7 @@
 		"name": "Monk",
 		"description": "A disciplined fighter who fuses martial prowess with lightning chi. The Monk balances offense and team support with inner calm.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🧘",
 		"role": "F",
 		"stats": {
 			"hp": 230,
@@ -269,7 +269,7 @@
 		"name": "Paladin",
 		"description": "A noble protector wielding holy lightning, the Paladin shields allies with divine might, absorbing blows with unmatched resilience.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🛡️",
 		"role": "F",
 		"stats": {
 			"hp": 280,
@@ -288,7 +288,7 @@
 		"name": "Pyromancer",
 		"description": "A volatile spellcaster who thrives on chaos. Her flames engulf enemies over time, creating panic and relentless pressure on enemy lines.",
 		"affinity": "Fire",
-		"icon": "",
+		"icon": "🕯️",
 		"role": "B",
 		"stats": {
 			"hp": 150,
@@ -307,7 +307,7 @@
 		"name": "Sentinel",
 		"description": "A mystical guardian radiating crackling energy. The Sentinel's spell-reflective aura punishes attackers and disrupts casters.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🌀",
 		"role": "F",
 		"stats": {
 			"hp": 0,
@@ -326,7 +326,7 @@
 		"name": "Sniper",
 		"description": "A lone wolf with unshakable aim, trained to spot and eliminate vulnerable targets with deadly accuracy. A single shot can end a fight before it begins.",
 		"affinity": "Lightning",
-		"icon": "",
+		"icon": "🎯",
 		"role": "B",
 		"stats": {
 			"hp": 150,
@@ -345,7 +345,7 @@
 		"name": "Valkyrie",
 		"description": "A divine warrior cloaked in frost. The Valkyrie descends upon the battlefield with chilling fury, cutting through foes with holy grace.",
 		"affinity": "Ice",
-		"icon": "",
+		"icon": "🕊️",
 		"role": "F",
 		"stats": {
 			"hp": 0,
@@ -364,7 +364,7 @@
 		"name": "Warlock",
 		"description": "A dark scholar who curses from afar, weakening enemies with infernal whispers. Not one for brute strength, but dangerous over time.",
 		"affinity": "Fire",
-		"icon": "",
+		"icon": "☠️",
 		"role": "B",
 		"stats": {
 			"hp": 150,
