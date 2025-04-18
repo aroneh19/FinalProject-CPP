@@ -1,7 +1,7 @@
 #include <iostream>
-#include <../ui/UiMenu.h>
-#include <../../include/characters/PlayerCharacter.h>
-#include <../../include/battle/Skill.h>
+#include <ui/UiMenu.h>
+#include <characters/PlayerCharacter.h>
+#include <battle/Skill.h>
 
 void UiMenu::Start()
 {
