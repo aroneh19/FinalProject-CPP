@@ -1,42 +1,85 @@
 #include <iostream>
+#include <../ui/UiMenu.h>
 #include <../../include/characters/PlayerCharacter.h>
 #include <../../include/battle/Skill.h>
 
-void view_characters(const std::vector<Character>& characters) {
-    
-
-    std::cout << "Displaying characters...\n";
+void UiMenu::Start()
+{
+    ShowMainMenu();
 }
 
-void how_to_play() {
-    std::cout << "Instructions on how to play the game...\n";
-}
-
-int main() {
+void UiMenu::ShowMainMenu()
+{
     std::cout << "WELCOME TO DUNGEON WARS JRPG\n";
 
-    int choice;
+    int choice = -1;
 
-    std::cout << "1. Start Game\n";
-    std::cout << "2. Load Game\n";
-    std::cout << "3. View Characters\n";
-    std::cout << "4. How to Play\n";
-    std::cout << "5. Exit\n";
+    while (choice != 5)
+    {
+        std::cout << "\n=== Heroes of the Abyss ===\n";
+        std::cout << "1. Start New Game\n";
+        std::cout << "2. Load Game\n";
+        std::cout << "3. View Characters\n";
+        std::cout << "4. How to Play\n";
+        std::cout << "5. Exit\n";
+        std::cout << "Choose an option: ";
+        std::cin >> choice;
 
-    std::cout << "Select an option: ";
-    std::cin >> choice;
-
-    switch (choice) {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-        case 5:
-            break;
+        HandleInput(choice);
     }
-    
+}
+
+void UiMenu::HandleInput(int choice)
+{
+    switch (choice)
+    {
+    case 1:
+        StartNewGame();
+        break;
+    case 2:
+        LoadGame();
+        break;
+    case 3:
+        ViewCharacters();
+        break;
+    case 4:
+        HowToPlay();
+        break;
+    case 5:
+        ExitGame();
+        break;
+    default:
+        std::cout << "Invalid choice. Please try again.\n";
+    }
+}
+
+void UiMenu::StartNewGame()
+{
+    //UiTeamSelect teamSelect;
+    //teamSelect.Start();
+}
+
+void UiMenu::LoadGame()
+{
+    std::cout << "Loading game...\n";
+}
+
+void UiMenu::ViewCharacters()
+{
+    std::cout << "Viewing characters...\n";
+}
+
+void UiMenu::HowToPlay()
+{
+    std::cout << "How to play:\n";
+    std::cout << "1. Use arrow keys to navigate.\n";
+    std::cout << "2. Press Enter to select.\n";
+    std::cout << "3. Follow the on-screen instructions.\n";
+    std::cout << "4. Have fun!\n";
+}
+
+void UiMenu::ExitGame()
+{
+    std::cout << "Thanks for playing!\n";
+    exit(0);
 }
