@@ -1,172 +1,200 @@
 [
-	{
-		"name": "Zombie",
-		"affinity": "Water",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Rotting Bite",
-			"description": "Chance to poison.",
-			"cooldown": 0
-		}
+  {
+    "name": "Zombie",
+    "affinity": "Water",
+    "stats": { "hp": 110, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
+    "skills": {
+      "name": "Rotting Bite",
+      "description": "Chance to poison.",
+      "cooldown": 0
+    },
+    "tier": 1
+  },
+  {
+    "name": "Wolf",
+    "affinity": "Earth",
+    "stats": { "hp": 100, "atk": 8, "def": 5, "spd": 9, "lck": 6 },
+    "skills": {
+      "name": "Pack Bite",
+      "description": "Chance to bleed.",
+      "cooldown": 0
+    },
+    "tier": 1
+  },
+  {
+    "name": "Cave Spider",
+    "affinity": "Water",
+    "stats": { "hp": 105, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
+    "skills": {
+      "name": "Web Trap",
+      "description": "Reduces SPD of enemy.",
+      "cooldown": 0
+    },
+    "tier": 1
+  },
+  {
+    "name": "Skeleton Warrior",
+    "affinity": "Lightning",
+    "stats": { "hp": 115, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
+    "skills": {
+      "name": "Bone Slash",
+      "description": "Reduces DEF.",
+      "cooldown": 0
+    },
+    "tier": 1
+  },
+  {
+	"name": "Plague Rat",
+	"affinity": "Water",
+	"stats": { "hp": 100, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
+	"skills": {
+		"name": "Filthy Bite",
+		"description": "Small chance to poison.",
+		"cooldown": 0
 	},
+	"tier": 1
+  },
 	{
-		"name": "Skeleton Warrior",
-		"affinity": "Lightning",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Bone Slash",
-			"description": "Reduces DEF of target.",
-			"cooldown": 0
-		}
+	"name": "Dark Acolyte",
+	"affinity": "Fire",
+	"stats": { "hp": 110, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
+	"skills": {
+		"name": "Soul Leech",
+		"description": "Deals damage and restores small HP.",
+		"cooldown": 0
 	},
-	{
-		"name": "Orc Brute",
-		"affinity": "Fire",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Crushing Blow",
-			"description": "Deals heavy damage to tanks.",
-			"cooldown": 0
-		}
+	"tier": 1
 	},
-	{
-		"name": "Werewolf",
-		"affinity": "Water",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Blood Howl",
-			"description": "Buffs allies' ATK.",
-			"cooldown": 0
-		}
-	},
-	{
-		"name": "Necromancer",
-		"affinity": "Ice",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Raise Dead",
-			"description": "Revives 1 skeleton.",
-			"cooldown": 0
-		}
-	},
-	{
-		"name": "Demon Imp",
-		"affinity": "Fire",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Infernal Blast",
-			"description": "Ranged AoE.",
-			"cooldown": 0
-		}
-	},
-	{
-		"name": "Cave Spider",
-		"affinity": "Water",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Web Trap",
-			"description": "Reduces SPD of random enemy.",
-			"cooldown": 0
-		}
-	},
-	{
-		"name": "Phantom Shade",
-		"affinity": "Ice",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Fear Gaze",
-			"description": "Chance to make enemies skip turns.",
-			"cooldown": 0
-		}
-	},
-	{
-		"name": "Forest Wight",
-		"affinity": "Water",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Toxic Spores",
-			"description": "Poison AoE.",
-			"cooldown": 0
-		}
-	},
-	{
-		"name": "Stone Guardian",
-		"affinity": "Earth",
-		"role": "",
-		"stats": {
-			"hp": 0,
-			"atk": 0,
-			"def": 0,
-			"spd": 0,
-			"lck": 0
-		},
-		"skills": {
-			"name": "Crag Slam",
-			"description": "Stuns 1 frontline target.",
-			"cooldown": 0
-		}
-	}
+  {
+    "name": "Dire Wolf",
+    "affinity": "Earth",
+    "stats": { "hp": 120, "atk": 10, "def": 6, "spd": 10, "lck": 7 },
+    "skills": {
+      "name": "Savage Maul",
+      "description": "Bleed + DEF down.",
+      "cooldown": 0
+    },
+    "tier": 2
+  },
+  {
+    "name": "Forest Wight",
+    "affinity": "Water",
+    "stats": { "hp": 125, "atk": 9, "def": 6, "spd": 8, "lck": 8 },
+    "skills": {
+      "name": "Toxic Spores",
+      "description": "Poison AoE.",
+      "cooldown": 0
+    },
+    "tier": 2
+  },
+  {
+    "name": "Demon Imp",
+    "affinity": "Fire",
+    "stats": { "hp": 115, "atk": 10, "def": 5, "spd": 11, "lck": 7 },
+    "skills": {
+      "name": "Infernal Blast",
+      "description": "Ranged AoE.",
+      "cooldown": 0
+    },
+    "tier": 2
+  },
+  {
+    "name": "Cultist",
+    "affinity": "Fire",
+    "stats": { "hp": 110, "atk": 9, "def": 5, "spd": 9, "lck": 9 },
+    "skills": {
+      "name": "Blood Oath",
+      "description": "Buffs all allies' ATK.",
+      "cooldown": 0
+    },
+    "tier": 2
+  },
+  {
+    "name": "Orc Brute",
+    "affinity": "Fire",
+    "stats": { "hp": 130, "atk": 11, "def": 6, "spd": 7, "lck": 6 },
+    "skills": {
+      "name": "Crushing Blow",
+      "description": "Heavy damage to tanks.",
+      "cooldown": 0
+    },
+    "tier": 2
+  },
+  {
+  "name": "Ash Stalker",
+  "affinity": "Fire",
+  "stats": { "hp": 125, "atk": 10, "def": 6, "spd": 10, "lck": 8 },
+  "skills": {
+    "name": "Ember Swipe",
+    "description": "Deals damage with a chance to burn.",
+    "cooldown": 0
+  },
+  "tier": 2
+  },
+  {
+    "name": "Necromancer",
+    "affinity": "Ice",
+    "stats": { "hp": 120, "atk": 8, "def": 6, "spd": 9, "lck": 10 },
+    "skills": {
+      "name": "Raise Dead",
+      "description": "Revives 1 skeleton.",
+      "cooldown": 0
+    },
+    "tier": 3
+  },
+  {
+    "name": "Phantom Shade",
+    "affinity": "Ice",
+    "stats": { "hp": 125, "atk": 9, "def": 6, "spd": 11, "lck": 11 },
+    "skills": {
+      "name": "Fear Gaze",
+      "description": "Chance to skip enemy turn.",
+      "cooldown": 0
+    },
+    "tier": 3
+  },
+  {
+    "name": "Ghoul",
+    "affinity": "Water",
+    "stats": { "hp": 130, "atk": 10, "def": 7, "spd": 9, "lck": 8 },
+    "skills": {
+      "name": "Flesh Rake",
+      "description": "Heals for damage dealt.",
+      "cooldown": 0
+    },
+    "tier": 3
+  },
+  {
+    "name": "Thornbeast",
+    "affinity": "Earth",
+    "stats": { "hp": 135, "atk": 11, "def": 7, "spd": 8, "lck": 9 },
+    "skills": {
+      "name": "Thornburst",
+      "description": "Retaliates when hit.",
+      "cooldown": 0
+    },
+    "tier": 3
+  },
+  {
+    "name": "Stone Guardian",
+    "affinity": "Earth",
+    "stats": { "hp": 140, "atk": 10, "def": 8, "spd": 6, "lck": 7 },
+    "skills": {
+      "name": "Crag Slam",
+      "description": "Stuns 1 frontline target.",
+      "cooldown": 0
+    },
+    "tier": 3
+  },
+  {
+    "name": "Werewolf",
+    "affinity": "Water",
+    "stats": { "hp": 135, "atk": 12, "def": 7, "spd": 10, "lck": 9 },
+    "skills": {
+      "name": "Blood Howl",
+      "description": "Buffs allies' ATK.",
+      "cooldown": 0
+    },
+    "tier": 3
+  }
 ]
