@@ -1,6 +1,7 @@
 [
   {
     "name": "Zombie",
+    "icon": "🧟",
     "affinity": "Water",
     "stats": { "hp": 110, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
     "skills": {
@@ -12,6 +13,7 @@
   },
   {
     "name": "Wolf",
+    "icon": "🐺",
     "affinity": "Earth",
     "stats": { "hp": 100, "atk": 8, "def": 5, "spd": 9, "lck": 6 },
     "skills": {
@@ -23,6 +25,7 @@
   },
   {
     "name": "Cave Spider",
+    "icon": "🕷️",
     "affinity": "Water",
     "stats": { "hp": 105, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
     "skills": {
@@ -34,6 +37,7 @@
   },
   {
     "name": "Skeleton Warrior",
+    "icon": "💀",
     "affinity": "Lightning",
     "stats": { "hp": 115, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
     "skills": {
@@ -44,29 +48,32 @@
     "tier": 1
   },
   {
-	"name": "Plague Rat",
-	"affinity": "Water",
-	"stats": { "hp": 100, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
-	"skills": {
-		"name": "Filthy Bite",
-		"description": "Small chance to poison.",
-		"cooldown": 0
-	},
-	"tier": 1
+    "name": "Plague Rat",
+    "icon": "🐀",
+    "affinity": "Water",
+    "stats": { "hp": 100, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
+    "skills": {
+      "name": "Filthy Bite",
+      "description": "Small chance to poison.",
+      "cooldown": 0
+    },
+    "tier": 1
   },
-	{
-	"name": "Dark Acolyte",
-	"affinity": "Fire",
-	"stats": { "hp": 110, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
-	"skills": {
-		"name": "Soul Leech",
-		"description": "Deals damage and restores small HP.",
-		"cooldown": 0
-	},
-	"tier": 1
-	},
+  {
+    "name": "Dark Acolyte",
+    "icon": "🕯️",
+    "affinity": "Fire",
+    "stats": { "hp": 110, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
+    "skills": {
+      "name": "Soul Leech",
+      "description": "Deals damage and restores small HP.",
+      "cooldown": 0
+    },
+    "tier": 1
+  },
   {
     "name": "Dire Wolf",
+    "icon": "🐺",
     "affinity": "Earth",
     "stats": { "hp": 120, "atk": 10, "def": 6, "spd": 10, "lck": 7 },
     "skills": {
@@ -78,6 +85,7 @@
   },
   {
     "name": "Forest Wight",
+    "icon": "🌲",
     "affinity": "Water",
     "stats": { "hp": 125, "atk": 9, "def": 6, "spd": 8, "lck": 8 },
     "skills": {
@@ -89,6 +97,7 @@
   },
   {
     "name": "Demon Imp",
+    "icon": "😈",
     "affinity": "Fire",
     "stats": { "hp": 115, "atk": 10, "def": 5, "spd": 11, "lck": 7 },
     "skills": {
@@ -100,6 +109,7 @@
   },
   {
     "name": "Cultist",
+    "icon": "🩸",
     "affinity": "Fire",
     "stats": { "hp": 110, "atk": 9, "def": 5, "spd": 9, "lck": 9 },
     "skills": {
@@ -111,6 +121,7 @@
   },
   {
     "name": "Orc Brute",
+    "icon": "👹",
     "affinity": "Fire",
     "stats": { "hp": 130, "atk": 11, "def": 6, "spd": 7, "lck": 6 },
     "skills": {
@@ -121,18 +132,20 @@
     "tier": 2
   },
   {
-  "name": "Ash Stalker",
-  "affinity": "Fire",
-  "stats": { "hp": 125, "atk": 10, "def": 6, "spd": 10, "lck": 8 },
-  "skills": {
-    "name": "Ember Swipe",
-    "description": "Deals damage with a chance to burn.",
-    "cooldown": 0
-  },
-  "tier": 2
+    "name": "Ash Stalker",
+    "icon": "🌫️",
+    "affinity": "Fire",
+    "stats": { "hp": 125, "atk": 10, "def": 6, "spd": 10, "lck": 8 },
+    "skills": {
+      "name": "Ember Swipe",
+      "description": "Deals damage with a chance to burn.",
+      "cooldown": 0
+    },
+    "tier": 2
   },
   {
     "name": "Necromancer",
+    "icon": "☠️",
     "affinity": "Ice",
     "stats": { "hp": 120, "atk": 8, "def": 6, "spd": 9, "lck": 10 },
     "skills": {
@@ -144,6 +157,7 @@
   },
   {
     "name": "Phantom Shade",
+    "icon": "👻",
     "affinity": "Ice",
     "stats": { "hp": 125, "atk": 9, "def": 6, "spd": 11, "lck": 11 },
     "skills": {
@@ -155,6 +169,7 @@
   },
   {
     "name": "Ghoul",
+    "icon": "🧌",
     "affinity": "Water",
     "stats": { "hp": 130, "atk": 10, "def": 7, "spd": 9, "lck": 8 },
     "skills": {
@@ -166,6 +181,7 @@
   },
   {
     "name": "Thornbeast",
+    "icon": "🌿",
     "affinity": "Earth",
     "stats": { "hp": 135, "atk": 11, "def": 7, "spd": 8, "lck": 9 },
     "skills": {
@@ -177,6 +193,7 @@
   },
   {
     "name": "Stone Guardian",
+    "icon": "🪨",
     "affinity": "Earth",
     "stats": { "hp": 140, "atk": 10, "def": 8, "spd": 6, "lck": 7 },
     "skills": {
@@ -188,6 +205,7 @@
   },
   {
     "name": "Werewolf",
+    "icon": "🐺",
     "affinity": "Water",
     "stats": { "hp": 135, "atk": 12, "def": 7, "spd": 10, "lck": 9 },
     "skills": {
