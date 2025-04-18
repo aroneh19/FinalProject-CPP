@@ -1,4 +1,4 @@
-#include "utils/JsonLoader.h"
+#include <utils/JsonLoader.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -187,7 +187,7 @@ Character JsonLoader::parseCharacter(const std::string &characterData)
     return character;
 }
 
-std::vector<Character> JsonLoader::loadPlayerFrontline(const std::string &filePath)
+std::vector<Character> JsonLoader::loadCharacters(const std::string &filePath)
 {
     std::vector<Character> characters;
     std::string jsonData = readFileToString(filePath);
@@ -202,22 +202,16 @@ std::vector<Character> JsonLoader::loadPlayerFrontline(const std::string &filePa
     return characters;
 }
 
-std::vector<Character> JsonLoader::loadPlayerBackline(const std::string &filePath)
-{
-    // Implementation is the same as loadPlayerFrontline
-    return loadPlayerFrontline(filePath);
-}
-
 std::vector<Character> JsonLoader::loadEnemies(const std::string &filePath)
 {
-    // Implementation is the same as loadPlayerFrontline
-    return loadPlayerFrontline(filePath);
+    // Implementation is the same as loadCharacters
+    return loadCharacters(filePath);
 }
 
 std::vector<Character> JsonLoader::loadBosses(const std::string &filePath)
 {
-    // Implementation is the same as loadPlayerFrontline
-    return loadPlayerFrontline(filePath);
+    // Implementation is the same as loadCharacters
+    return loadCharacters(filePath);
 }
 
 std::map<std::string, Affinity> JsonLoader::loadAffinities(const std::string &filePath)

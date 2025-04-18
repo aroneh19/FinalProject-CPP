@@ -3,12 +3,25 @@
 
 #include <string>
 #include <vector>
+#include "battle/Skill.h"
 
-class Character {
+struct Stats
+{
+    int hp, atk, def, spd, lck;
+};
+
+class Character
+{
+
 public:
     std::string name;
     std::string affinity;
-    int hp, atk, def, spd, lck;
+    std::string description;
+    std::string icon;
+    std::string role;
 
-    static std::vector<Character> LoadFromJson(const std::string& filePath);
+    Stats stats;
+    Skill skill;
+
+    const Stats& getStats() const { return stats;}
 };

@@ -5,33 +5,8 @@
 #include <map>
 #include <memory>
 #include <fstream>
-
-struct Stats
-{
-    int hp;
-    int atk;
-    int def;
-    int spd;
-    int lck;
-};
-
-struct Skill
-{
-    std::string name;
-    std::string description;
-    int cooldown;
-};
-
-struct Character
-{
-    std::string name;
-    std::string description;
-    std::string affinity;
-    std::string icon;
-    std::string role;
-    Stats stats;
-    Skill skill;
-};
+#include <battle/Skill.h>
+#include "characters/Character.h"
 
 struct Affinity
 {
@@ -49,8 +24,7 @@ public:
     ~JsonLoader();
 
     // Load methods for each data file
-    std::vector<Character> loadPlayerFrontline(const std::string &filePath);
-    std::vector<Character> loadPlayerBackline(const std::string &filePath);
+    std::vector<Character> loadCharacters(const std::string &filePath);
     std::vector<Character> loadEnemies(const std::string &filePath);
     std::vector<Character> loadBosses(const std::string &filePath);
     std::map<std::string, Affinity> loadAffinities(const std::string &filePath);

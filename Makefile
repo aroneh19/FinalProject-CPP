@@ -5,7 +5,7 @@ CXXFLAGS = -Wall -std=c++23 -Iinclude
 # Directories
 SRC_DIR = src
 BIN_DIR = bin
-TARGET = $(BIN_DIR)/jrpg
+TARGET = main
 
 # Source and object files
 SRCS = $(shell find $(SRC_DIR) -name "*.cpp")

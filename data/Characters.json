@@ -1,0 +1,382 @@
+[
+	{
+		"name": "Archer",
+		"description": "A swift and agile hunter who excels at striking from a distance. Her arrows rain down on enemies with precision and speed, targeting multiple foes at once.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 160,
+			"atk": 17,
+			"def": 7,
+			"spd": 15,
+			"lck": 11
+		},
+		"skills": {
+			"name": "Double Shot",
+			"description": "Two random hits.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Assassin",
+		"description": "A deadly and elusive killer, dancing through the shadows to eliminate targets behind enemy lines with surgical precision and critical strikes.",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 130,
+			"atk": 16,
+			"def": 4,
+			"spd": 20,
+			"lck": 18
+		},
+		"skills": {
+			"name": "Shadow Step",
+			"description": "Ignores frontline, high crit chance.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Bard",
+		"description": "A musical tactician who empowers allies with magical melodies. Their songs boost morale and speed, turning the tide of battle with rhythm.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 160,
+			"atk": 9,
+			"def": 9,
+			"spd": 13,
+			"lck": 16
+		},
+		"skills": {
+			"name": "Battle Hymn",
+			"description": "Boost SPD for team for 2 turns.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Berserker",
+		"description": "A ferocious warrior who channels fire into fury. The lower his health, the deadlier his rampage becomes—unpredictable and unstoppable.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 220,
+			"atk": 18,
+			"def": 10,
+			"spd": 10,
+			"lck": 8
+		},
+		"skills": {
+			"name": "Rage Strike",
+			"description": "Deals more damage as HP lowers.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Demonbound",
+		"description": "A cursed soul wrapped in flame, the Demonbound slices through defenses with dark fire, fueled by forbidden power.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Soulfire Blade",
+			"description": "True damage that bypasses DEF.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Druid",
+		"description": "A guardian of nature, using water-infused rituals to restore vitality to the entire party. Durable for a support, with surprising resilience.",
+		"affinity": "Water",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 170,
+			"atk": 8,
+			"def": 10,
+			"spd": 11,
+			"lck": 14
+		},
+		"skills": {
+			"name": "Rejuvenation",
+			"description": "Heal over time for all allies.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Frost Knight",
+		"description": "A disciplined warrior of ice whose armor deflects critical hits. Cold and composed, the Frost Knight slows battles to a crawl.",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Frozen Guard",
+			"description": "Reduces incoming crit chance.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Gladiator",
+		"description": "A fiery brawler forged in the arena. The Gladiator excels in brute force, battering the frontline and leaving enemies bleeding.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Arena Smash",
+			"description": "Hits frontline + minor bleed.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Healer",
+		"description": "A serene and wise support unit, channeling calming waters to mend wounds and keep allies on their feet in the heat of battle.",
+		"affinity": "Water",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 150,
+			"atk": 6,
+			"def": 6,
+			"spd": 10,
+			"lck": 17
+		},
+		"skills": {
+			"name": "Divine Light",
+			"description": "Restores HP to one ally.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Ice Witch",
+		"description": "Cold and calculated, she bends frost to her will, binding enemies in place with chilling spells that freeze their actions and nerves alike.",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 140,
+			"atk": 16,
+			"def": 5,
+			"spd": 10,
+			"lck": 13
+		},
+		"skills": {
+			"name": "Frostbind",
+			"description": "Chance to freeze backline target.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Iron Golem",
+		"description": "A towering earthen construct of raw defense and slow devastation. Its mighty slams shake the ground and pulverize enemies.",
+		"affinity": "Earth",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Stone Slam",
+			"description": "AoE attack, slow but powerful.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Knight",
+		"description": "A stalwart defender rooted in the earth, the Knight excels at stunning foes and holding the front with honor-bound discipline.",
+		"affinity": "Earth",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 260,
+			"atk": 12,
+			"def": 17,
+			"spd": 7,
+			"lck": 4
+		},
+		"skills": {
+			"name": "Shield Bash",
+			"description": "Attacks + chance to stun.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Mage",
+		"description": "A scholarly master of the arcane arts, wielding volatile lightning magic to devastate groups of enemies. Fragile, but devastating when protected.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 140,
+			"atk": 20,
+			"def": 5,
+			"spd": 12,
+			"lck": 10
+		},
+		"skills": {
+			"name": "Arcane Storm",
+			"description": "AoE magic blast.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Monk",
+		"description": "A disciplined fighter who fuses martial prowess with lightning chi. The Monk balances offense and team support with inner calm.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 230,
+			"atk": 14,
+			"def": 12,
+			"spd": 13,
+			"lck": 10
+		},
+		"skills": {
+			"name": "Chi Barrier",
+			"description": "Buff DEF for the whole team.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Paladin",
+		"description": "A noble protector wielding holy lightning, the Paladin shields allies with divine might, absorbing blows with unmatched resilience.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 280,
+			"atk": 10,
+			"def": 18,
+			"spd": 6,
+			"lck": 6
+		},
+		"skills": {
+			"name": "Divine Shield",
+			"description": "Reduces damage taken for 2 turns.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Pyromancer",
+		"description": "A volatile spellcaster who thrives on chaos. Her flames engulf enemies over time, creating panic and relentless pressure on enemy lines.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 150,
+			"atk": 19,
+			"def": 6,
+			"spd": 11,
+			"lck": 10
+		},
+		"skills": {
+			"name": "Inferno",
+			"description": "Burn damage over 3 turns.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Sentinel",
+		"description": "A mystical guardian radiating crackling energy. The Sentinel's spell-reflective aura punishes attackers and disrupts casters.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Spell Reflect",
+			"description": "Returns 25% damage for 2 turns.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Sniper",
+		"description": "A lone wolf with unshakable aim, trained to spot and eliminate vulnerable targets with deadly accuracy. A single shot can end a fight before it begins.",
+		"affinity": "Lightning",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 150,
+			"atk": 18,
+			"def": 6,
+			"spd": 14,
+			"lck": 15
+		},
+		"skills": {
+			"name": "Headshot",
+			"description": "High crit, chance to instantly KO weak targets.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Valkyrie",
+		"description": "A divine warrior cloaked in frost. The Valkyrie descends upon the battlefield with chilling fury, cutting through foes with holy grace.",
+		"affinity": "Ice",
+		"icon": "",
+		"role": "F",
+		"stats": {
+			"hp": 0,
+			"atk": 0,
+			"def": 0,
+			"spd": 0,
+			"lck": 0
+		},
+		"skills": {
+			"name": "Heaven's Wrath",
+			"description": "Hits all enemies in front line.",
+			"cooldown": 0
+		}
+	},
+	{
+		"name": "Warlock",
+		"description": "A dark scholar who curses from afar, weakening enemies with infernal whispers. Not one for brute strength, but dangerous over time.",
+		"affinity": "Fire",
+		"icon": "",
+		"role": "B",
+		"stats": {
+			"hp": 150,
+			"atk": 12,
+			"def": 7,
+			"spd": 9,
+			"lck": 14
+		},
+		"skills": {
+			"name": "Curse of Weakness",
+			"description": "Debuff enemy ATK.",
+			"cooldown": 0
+		}
+	}
+]
