@@ -6,6 +6,7 @@
 #include <utils/JsonLoader.h>
 #include <iomanip>
 #include <vector>
+#include "ui/UiTeamSelect.h"
 
 void UiMenu::Start()
 {
@@ -58,8 +59,8 @@ void UiMenu::HandleInput(int choice)
 
 void UiMenu::StartNewGame()
 {
-    // UiTeamSelect teamSelect;
-    // teamSelect.Start();
+    UiTeamSelect teamSelect;
+    teamSelect.Start();
 }
 
 void UiMenu::LoadGame()
