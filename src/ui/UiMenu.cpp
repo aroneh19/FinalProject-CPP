@@ -8,7 +8,8 @@
 #include <vector>
 #include "ui/UiTeamSelect.h"
 #include <limits>
-#include "ui/UiBattle.h" 
+#include "ui/UiBattle.h"
+#include "battle/BattleManager.h"  
 
 void UiMenu::Start()
 {
@@ -64,8 +65,8 @@ void UiMenu::StartNewGame()
     UiTeamSelect teamSelect;
     Team team = teamSelect.Start();
 
-    UiBattle battle;
-    battle.BattleStart(team);
+    BattleManager manager;
+    manager.startAllWaves(team);
 }
 
 void UiMenu::LoadGame()
