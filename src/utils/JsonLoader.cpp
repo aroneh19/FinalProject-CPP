@@ -142,7 +142,6 @@ Character JsonLoader::parseCharacter(const std::string &characterData)
     character.name = extractString(characterData, "name");
     character.description = extractString(characterData, "description");
     character.affinity = extractString(characterData, "affinity");
-    character.icon = extractString(characterData, "icon");
     character.role = extractString(characterData, "role");
 
     // Find stats section

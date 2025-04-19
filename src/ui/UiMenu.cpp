@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <vector>
 #include "ui/UiTeamSelect.h"
+#include <limits>
 
 void UiMenu::Start()
 {
@@ -75,9 +76,9 @@ void UiMenu::ViewCharacters()
     std::vector<Character> characters = loader.loadCharacters("data/Characters.json");
 
     // Print header
-    std::cout << "+----+----------------+------+------+-----------+-----+-----+-----+-----+-----+\n";
-    std::cout << "| Nr | Name           | Icon | Role | Affinity  | HP  | ATK | DEF | SPD | LCK |\n";
-    std::cout << "+----+----------------+------+------+-----------+-----+-----+-----+-----+-----+\n";
+    std::cout << "+----+----------------+-------+-----+-----------+-----+-----+-----+\n";
+    std::cout << "| Nr | Champion       | Role  | Aff | HP  | ATK | DEF | SPD | LCK |\n";
+    std::cout << "+----+----------------+-------+-----+-----------+-----+-----+-----+\n";
 
     // Loop through all characters
     for (size_t i = 0; i < characters.size(); ++i)
@@ -88,9 +89,8 @@ void UiMenu::ViewCharacters()
         std::cout << "| "
                   << std::right << std::setw(2) << i + 1 << " | "
                   << std::left << std::setw(14) << c.name << " | "
-                  << std::left << std::setw(4) << c.icon << " | "
-                  << std::left << std::setw(4) << c.role << " | "
-                  << std::left << std::setw(9) << c.affinity << " | "
+                  << std::left << std::setw(5) << c.role << " | "
+                  << std::left << std::setw(3) << c.affinity << " | "
                   << std::right << std::setw(3) << s.hp << " | "
                   << std::right << std::setw(3) << s.atk << " | "
                   << std::right << std::setw(3) << s.def << " | "
@@ -98,31 +98,10 @@ void UiMenu::ViewCharacters()
                   << std::right << std::setw(3) << s.lck << " |\n";
     }
 
-    std::cout << "+----+----------------+------+------+-----------+-----+-----+-----+-----+-----+\n";
-
-    // Ask user for a character to see description
-    std::string inputName;
-    std::cout << "\nEnter the name of a character to view their description: ";
-    std::getline(std::cin, inputName);
-
-    // Search and print the description
-    bool found = false;
-    for (const auto &c : characters)
-    {
-        if (c.name == inputName)
-        {
-            std::cout << "\nDescription for " << c.name << ": " << c.description << "\n";
-            found = true;
-            break;
-        }
-    }
-
-    if (!found)
-    {
-        std::cout << "Character '" << inputName << "' not found.\n";
-    }
+    std::cout << "+----+----------------+-------+-----+-----------+-----+-----+-----+\n";
 
     std::cout << "\nPress Enter to continue...";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear leftover '\n'
     std::string temp;
     std::getline(std::cin, temp);
 }

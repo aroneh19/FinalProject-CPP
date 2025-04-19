@@ -10,8 +10,8 @@
 void UiTeamSelect::Start()
 {
     Team team;
-    displayTeams("F", team);
-    displayTeams("B", team);
+    displayTeams("Front", team);
+    displayTeams("Back", team);
     int hallo;
     std::cin >> hallo;
 }
@@ -34,9 +34,9 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
     while (teamCounter < 2)
     {
         Utils::clearScreen();
-        std::cout << "+----+--------------+------+-----------+-----+-----+-----+-----+-----+\n";
-        std::cout << "| Nr | Name         | Icon | Affinity  | HP  | ATK | DEF | SPD | LCK |\n";
-        std::cout << "+----+--------------+------+-----------+-----+-----+-----+-----+-----+\n";
+        std::cout << "+----+--------------+-----+-----+-----+-----+-----+-----+\n";
+        std::cout << "| Nr | Champion     | Aff | HP  | ATK | DEF | SPD | LCK |\n";
+        std::cout << "+----+--------------+-----+-----+-----+-----+-----+-----+\n";
 
         // Loop through all characters
         for (size_t i = 0; i < filteredCharacters.size(); ++i)
@@ -46,8 +46,7 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
             std::cout << "| "
                       << std::right << std::setw(2) << (i + 1) << " | "
                       << std::left << std::setw(12) << c.name << " |  "
-                      << std::left << std::setw(5) << c.icon << " | "
-                      << std::left << std::setw(9) << c.affinity << " | "
+                      << std::left << std::setw(3) << c.affinity << " | "
                       << std::right << std::setw(3) << s.hp << " | "
                       << std::right << std::setw(3) << s.atk << " | "
                       << std::right << std::setw(3) << s.def << " | "
@@ -55,7 +54,7 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
                       << std::right << std::setw(3) << s.lck << " |\n";
         }
 
-        std::cout << "+----+----------------+------+-----------+-----+-----+-----+-----+-----+\n";
+        std::cout << "+----+--------------+--------+-----+-----+-----+-----+-----+\n";
         std::cout << "Select first character of your team: ";
         size_t firstCharacterIndex = 0;
         std::cin >> firstCharacterIndex;

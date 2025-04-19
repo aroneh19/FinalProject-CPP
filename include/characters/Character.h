@@ -17,7 +17,6 @@ public:
     std::string name;
     std::string affinity;
     std::string description;
-    std::string icon;
     std::string role;
 
     Stats stats;
