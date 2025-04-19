@@ -33,7 +33,7 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
     int teamCounter = 0;
     while (teamCounter < 2)
     {
-        // Utils::clearScreen();
+        Utils::clearScreen();
         std::cout << "+----+--------------+------+-----------+-----+-----+-----+-----+-----+\n";
         std::cout << "| Nr | Name         | Icon | Affinity  | HP  | ATK | DEF | SPD | LCK |\n";
         std::cout << "+----+--------------+------+-----------+-----+-----+-----+-----+-----+\n";
@@ -67,8 +67,6 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
         team.addCharacter(filteredCharacters[firstCharacterIndex - 1]);
         filteredCharacters.erase(filteredCharacters.begin() + firstCharacterIndex - 1);
         teamCounter++;
-        std::cout << "Selected character: " << team.getCharacters().back().name << "\n";
-        std::cout << "Current team size: " << team.getCharacters().size() << "\n";
     }
 }
 
