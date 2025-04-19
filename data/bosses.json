@@ -2,7 +2,7 @@
   {
     "name": "Troll Warlord",
     "role": "",
-    "affinity": "Earth",
+    "affinity": "ERT",
     "icon": "🧌",
     "stats": {
       "hp": 250,
@@ -20,7 +20,7 @@
   {
     "name": "Frost Giant",
     "role": "",
-    "affinity": "Ice",
+    "affinity": "ICE",
     "icon": "🧊",
     "stats": {
       "hp": 270,
@@ -38,7 +38,7 @@
   {
     "name": "Arcane Sentinel",
     "role": "",
-    "affinity": "Lightning",
+    "affinity": "LGT",
     "icon": "🌀",
     "stats": {
       "hp": 290,
@@ -56,7 +56,7 @@
   {
     "name": "Undead Dragon",
     "role": "",
-    "affinity": "Ice",
+    "affinity": "ICE",
     "icon": "🐉",
     "stats": {
       "hp": 320,
@@ -74,7 +74,7 @@
   {
     "name": "Demon Lord",
     "role": "",
-    "affinity": "Fire",
+    "affinity": "FIR",
     "icon": "👿",
     "stats": {
       "hp": 350,

@@ -5,17 +5,18 @@
 #include "characters/Character.h"
 #include <iomanip>
 #include <vector>
+#include "game/Team.h"
 
 void UiTeamSelect::Start()
 {
-    std::vector<Character> team;
+    Team team;
     displayTeams("F", team);
     displayTeams("B", team);
     int hallo;
     std::cin >> hallo;
 }
 
-void UiTeamSelect::displayTeams(const std::string &role, std::vector<Character> &team)
+void UiTeamSelect::displayTeams(const std::string &role, Team &team)
 {
     JsonLoader loader;
     std::vector<Character> characters = loader.loadCharacters("data/Characters.json");
@@ -32,22 +33,20 @@ void UiTeamSelect::displayTeams(const std::string &role, std::vector<Character> 
     int teamCounter = 0;
     while (teamCounter < 2)
     {
-        //Utils::clearScreen();
-        std::cout << "+----+----------------+------+-----------+-----+-----+-----+-----+-----+\n";
-        std::cout << "| Nr | Name           | Icon | Affinity  | HP  | ATK | DEF | SPD | LCK |\n";
-        std::cout << "+----+----------------+------+-----------+-----+-----+-----+-----+-----+\n";
+        // Utils::clearScreen();
+        std::cout << "+----+--------------+------+-----------+-----+-----+-----+-----+-----+\n";
+        std::cout << "| Nr | Name         | Icon | Affinity  | HP  | ATK | DEF | SPD | LCK |\n";
+        std::cout << "+----+--------------+------+-----------+-----+-----+-----+-----+-----+\n";
 
         // Loop through all characters
-        int counter = 0;
         for (size_t i = 0; i < filteredCharacters.size(); ++i)
         {
             const Character &c = filteredCharacters[i];
             const Stats &s = c.getStats();
-            counter++;
             std::cout << "| "
-                      << std::right << std::setw(2) << counter << " | "
-                      << std::left << std::setw(14) << c.name << " | "
-                      << std::left << std::setw(4) << c.icon << " | "
+                      << std::right << std::setw(2) << (i + 1) << " | "
+                      << std::left << std::setw(12) << c.name << " |  "
+                      << std::left << std::setw(5) << c.icon << " | "
                       << std::left << std::setw(9) << c.affinity << " | "
                       << std::right << std::setw(3) << s.hp << " | "
                       << std::right << std::setw(3) << s.atk << " | "
@@ -58,24 +57,22 @@ void UiTeamSelect::displayTeams(const std::string &role, std::vector<Character> 
 
         std::cout << "+----+----------------+------+-----------+-----+-----+-----+-----+-----+\n";
         std::cout << "Select first character of your team: ";
-        int firstCharacterIndex = 0;
+        size_t firstCharacterIndex = 0;
         std::cin >> firstCharacterIndex;
-        if (firstCharacterIndex < 1 || firstCharacterIndex > counter)
+        if (firstCharacterIndex < 1 || firstCharacterIndex > filteredCharacters.size())
         {
             std::cout << "Invalid selection. Please try again.\n";
             continue; // Skip to the next iteration of the while loop
         }
-        team.push_back(filteredCharacters[firstCharacterIndex - 1]);
+        team.addCharacter(filteredCharacters[firstCharacterIndex - 1]);
         filteredCharacters.erase(filteredCharacters.begin() + firstCharacterIndex - 1);
         teamCounter++;
-        for (size_t i = 0; i < team.size(); i++)
-        {
-            std::cout << "Team " << i + 1 << ": " << team[i].name << "\n";
-        }
+        std::cout << "Selected character: " << team.getCharacters().back().name << "\n";
+        std::cout << "Current team size: " << team.getCharacters().size() << "\n";
     }
 }
 
-void UiTeamSelect::selectTeam(std::vector<Character> &team)
+void UiTeamSelect::selectTeam(Team &team)
 {
     int hallo;
     std::cin >> hallo;

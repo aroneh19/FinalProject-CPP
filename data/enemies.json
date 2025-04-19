@@ -2,7 +2,7 @@
   {
     "name": "Zombie",
     "icon": "🧟",
-    "affinity": "Water",
+    "affinity": "WTR",
     "stats": { "hp": 110, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
     "skills": {
       "name": "Rotting Bite",
@@ -14,7 +14,7 @@
   {
     "name": "Wolf",
     "icon": "🐺",
-    "affinity": "Earth",
+    "affinity": "ERT",
     "stats": { "hp": 100, "atk": 8, "def": 5, "spd": 9, "lck": 6 },
     "skills": {
       "name": "Pack Bite",
@@ -26,7 +26,7 @@
   {
     "name": "Cave Spider",
     "icon": "🕷️",
-    "affinity": "Water",
+    "affinity": "WTR",
     "stats": { "hp": 105, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
     "skills": {
       "name": "Web Trap",
@@ -38,7 +38,7 @@
   {
     "name": "Skeleton Warrior",
     "icon": "💀",
-    "affinity": "Lightning",
+    "affinity": "LGT",
     "stats": { "hp": 115, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
     "skills": {
       "name": "Bone Slash",
@@ -50,7 +50,7 @@
   {
     "name": "Plague Rat",
     "icon": "🐀",
-    "affinity": "Water",
+    "affinity": "WTR",
     "stats": { "hp": 100, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
     "skills": {
       "name": "Filthy Bite",
@@ -62,7 +62,7 @@
   {
     "name": "Dark Acolyte",
     "icon": "🕯️",
-    "affinity": "Fire",
+    "affinity": "FIR",
     "stats": { "hp": 110, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
     "skills": {
       "name": "Soul Leech",
@@ -74,7 +74,7 @@
   {
     "name": "Dire Wolf",
     "icon": "🐺",
-    "affinity": "Earth",
+    "affinity": "ERT",
     "stats": { "hp": 120, "atk": 10, "def": 6, "spd": 10, "lck": 7 },
     "skills": {
       "name": "Savage Maul",
@@ -86,7 +86,7 @@
   {
     "name": "Forest Wight",
     "icon": "🌲",
-    "affinity": "Water",
+    "affinity": "WTR",
     "stats": { "hp": 125, "atk": 9, "def": 6, "spd": 8, "lck": 8 },
     "skills": {
       "name": "Toxic Spores",
@@ -98,7 +98,7 @@
   {
     "name": "Demon Imp",
     "icon": "😈",
-    "affinity": "Fire",
+    "affinity": "FIR",
     "stats": { "hp": 115, "atk": 10, "def": 5, "spd": 11, "lck": 7 },
     "skills": {
       "name": "Infernal Blast",
@@ -110,7 +110,7 @@
   {
     "name": "Cultist",
     "icon": "🩸",
-    "affinity": "Fire",
+    "affinity": "FIR",
     "stats": { "hp": 110, "atk": 9, "def": 5, "spd": 9, "lck": 9 },
     "skills": {
       "name": "Blood Oath",
@@ -122,7 +122,7 @@
   {
     "name": "Orc Brute",
     "icon": "👹",
-    "affinity": "Fire",
+    "affinity": "FIR",
     "stats": { "hp": 130, "atk": 11, "def": 6, "spd": 7, "lck": 6 },
     "skills": {
       "name": "Crushing Blow",
@@ -134,7 +134,7 @@
   {
     "name": "Ash Stalker",
     "icon": "🌫️",
-    "affinity": "Fire",
+    "affinity": "FIR",
     "stats": { "hp": 125, "atk": 10, "def": 6, "spd": 10, "lck": 8 },
     "skills": {
       "name": "Ember Swipe",
@@ -146,7 +146,7 @@
   {
     "name": "Necromancer",
     "icon": "☠️",
-    "affinity": "Ice",
+    "affinity": "ICE",
     "stats": { "hp": 120, "atk": 8, "def": 6, "spd": 9, "lck": 10 },
     "skills": {
       "name": "Raise Dead",
@@ -158,7 +158,7 @@
   {
     "name": "Phantom Shade",
     "icon": "👻",
-    "affinity": "Ice",
+    "affinity": "ICE",
     "stats": { "hp": 125, "atk": 9, "def": 6, "spd": 11, "lck": 11 },
     "skills": {
       "name": "Fear Gaze",
@@ -170,7 +170,7 @@
   {
     "name": "Ghoul",
     "icon": "🧌",
-    "affinity": "Water",
+    "affinity": "WTR",
     "stats": { "hp": 130, "atk": 10, "def": 7, "spd": 9, "lck": 8 },
     "skills": {
       "name": "Flesh Rake",
@@ -182,7 +182,7 @@
   {
     "name": "Thornbeast",
     "icon": "🌿",
-    "affinity": "Earth",
+    "affinity": "ERT",
     "stats": { "hp": 135, "atk": 11, "def": 7, "spd": 8, "lck": 9 },
     "skills": {
       "name": "Thornburst",
@@ -194,7 +194,7 @@
   {
     "name": "Stone Guardian",
     "icon": "🪨",
-    "affinity": "Earth",
+    "affinity": "ERT",
     "stats": { "hp": 140, "atk": 10, "def": 8, "spd": 6, "lck": 7 },
     "skills": {
       "name": "Crag Slam",
@@ -206,7 +206,7 @@
   {
     "name": "Werewolf",
     "icon": "🐺",
-    "affinity": "Water",
+    "affinity": "WTR",
     "stats": { "hp": 135, "atk": 12, "def": 7, "spd": 10, "lck": 9 },
     "skills": {
       "name": "Blood Howl",

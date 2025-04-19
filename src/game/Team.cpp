@@ -1,10 +1,17 @@
-#include "Team.h"
+#include "game/Team.h"
 
 void Team::addCharacter(Character character) {
-    characters.push_back(character); //Þarf að laga
+    team.push_back(character);
 }
 
 void Team::addItem(Item item) {
-    items.push_back(item); //örgl þetta líka
+    items.push_back(item);
 }
 
+const std::vector<Character>& Team::getCharacters() const {
+    return team;
+}
+
+const std::vector<Item>& Team::getItems() const {
+    return items;
+}
