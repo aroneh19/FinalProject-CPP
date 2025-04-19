@@ -62,7 +62,6 @@ void UiMenu::HandleInput(int choice)
 void UiMenu::StartNewGame()
 {
     UiTeamSelect teamSelect;
-    teamSelect.Start();
     Team team = teamSelect.Start();
 
     UiBattle battle;

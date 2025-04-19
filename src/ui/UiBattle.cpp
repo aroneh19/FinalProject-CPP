@@ -14,9 +14,15 @@ void UiBattle::BattleStart(Team &team)
 
     Utils::clearScreen();
     std::cout << "\n";
-    std::cout << "╔" << std::string(70, '=') << "╗\n";
-    std::cout << "║" << std::setw(40) << std::right << "⚔️  BATTLE " << round << " - WAVE " << wave << std::setw(30) << std::left << " ║\n";
-    std::cout << "╚" << std::string(70, '=') << "╝\n\n";
+    
+    std::string title = "⚔️  BATTLE " + std::to_string(round) + " - WAVE " + std::to_string(wave);
+    int width = 70;
+    int padding = (width - title.length()) / 2;
+
+    std::cout << "╔" << std::string(width, '=') << "╗\n";
+    std::cout << "║" << std::string(padding, ' ') << title << std::string(width - padding - title.length(), ' ') << "║\n";
+    std::cout << "╚" << std::string(width, '=') << "╝\n\n";
+
 
     std::cout << "Your Party\n";
     std::cout << std::string(70, '-') << "\n";
@@ -28,9 +34,20 @@ void UiBattle::BattleStart(Team &team)
         const Stats &s = hero.getStats();
 
         int barLength = 15;
+        int currentHp = s.hp;
         int maxHp = s.hp > 0 ? s.hp : 1; // fallback to avoid division by 0
-        int filled = static_cast<int>((static_cast<float>(s.hp) / maxHp) * barLength);
-        std::string bar = std::string(filled, '#') + std::string(barLength - filled, '-');
+    
+        int filled = static_cast<int>((static_cast<float>(currentHp) / maxHp) * barLength);
+    
+        // Build filled green squares
+        std::string filledBar = "";
+        for (int i = 0; i < filled; ++i)
+            filledBar += "\033[32m■\033[0m"; // green square
+    
+        // Build empty gray dashes
+        std::string emptyBar(barLength - filled, '-');
+    
+        std::string bar = filledBar + emptyBar;
 
         std::cout << std::setw(12) << std::left << hero.name
                   << " " << hero.affinity << " HP [" << bar << "] " << s.hp << "/" << maxHp
