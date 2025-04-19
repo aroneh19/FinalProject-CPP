@@ -12,7 +12,7 @@ SRCS = $(shell find $(SRC_DIR) -name "*.cpp")
 OBJS = $(patsubst %.cpp, %.o, $(subst $(SRC_DIR)/, $(BIN_DIR)/, $(SRCS)))
 
 # Default rule
-all: $(TARGET)
+all: clean $(TARGET)
 
 # Ensure bin directory exists
 $(BIN_DIR):
@@ -30,5 +30,6 @@ $(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp
 # Clean
 clean:
 	@rm -rf $(BIN_DIR)
+	@rm -f $(TARGET)
 
 .PHONY: all clean
