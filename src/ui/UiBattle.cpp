@@ -1,42 +1,47 @@
+#include "ui/UiBattle.h"
 #include <iostream>
-#include <ui/UiBattle.h>
+#include <iomanip>
+#include <vector>
+#include <characters/Character.h>
+#include <game/Team.h>
+#include <utils/Utils.h>
+#include <limits>
 
+void UiBattle::BattleStart(Team &team)
+{
+    int round = 1;
+    int wave = 1;
 
+    Utils::clearScreen();
+    std::cout << "\n";
+    std::cout << "╔" << std::string(70, '=') << "╗\n";
+    std::cout << "║" << std::setw(40) << std::right << "⚔️  BATTLE " << round << " - WAVE " << wave << std::setw(30) << std::left << " ║\n";
+    std::cout << "╚" << std::string(70, '=') << "╝\n\n";
 
-/* 
-╔════════════════════════════════════════════════════════════════════╗
-║                          ⚔️  BATTLE - ROUND 3                      ║
-╚════════════════════════════════════════════════════════════════════╝
+    std::cout << "Your Party\n";
+    std::cout << std::string(70, '-') << "\n";
 
-🧙‍♂️  Your Party
-────────────────────────────────────────────────────────────────────
-🛡️ Paladin     🔥 HP [██████▒-----] 220/280 | CD: 1 | ULT: 45%
-💪 Berserker   🔥 HP [█████▒------] 170/220 | CD: 0 | ULT: 85%
-🧘 Monk        ⚡ HP [████████████] 230/230 | CD: 0 | ULT: 60%
-👹 Demonbound  🔥 HP [███████▒----] 190/250 | CD: 2 | ULT: 95% 💥
+    const std::vector<Character> &heroes = team.getCharacters();
 
-👹 Enemy Team
-────────────────────────────────────────────────────────────────────
-1. Undead Dragon ❄️ HP [███████▒----] 250/320
-2. Necromancer   ❄️ HP [██████▒-----] 110/150
-3. Ghoul         💧 HP [████████░░░░] 130/140
+    for (const auto &hero : heroes)
+    {
+        const Stats &s = hero.getStats();
 
-────────────────────────────────────────────────────────────────────
+        int barLength = 15;
+        int maxHp = s.hp > 0 ? s.hp : 1; // fallback to avoid division by 0
+        int filled = static_cast<int>((static_cast<float>(s.hp) / maxHp) * barLength);
+        std::string bar = std::string(filled, '#') + std::string(barLength - filled, '-');
 
-📜 Last Turn:
-💀 Undead Dragon used **Bone Storm**! Hit all allies for 20 damage.
+        std::cout << hero.icon << " " << std::setw(12) << std::left << hero.name
+                  << " " << hero.affinity << " HP [" << bar << "] " << s.hp << "/" << maxHp
+                  << " | CD: 0"
+                  << "\n";
+    }
 
-🎯 It is 💪 Berserker’s turn!
+    std::cout << "\n";
+    std::cout << "(Enemies will be implemented here...)\n";
 
-Skill: **Rage Strike** — ✅ Ready  
-Ultimate: **❌ Not Ready** (85%)
-
-Choose an action:
- 1. Basic Attack
- 2. Use Rage Strike (No cooldown)
- 3. Charge Ultimate (+25%)
- 4. Use Item
-
-Enter choice (1–4): _
-
-*/
+    std::cout << "\nPress Enter to continue...";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+}
