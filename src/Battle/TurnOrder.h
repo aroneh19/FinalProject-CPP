@@ -1,18 +1,20 @@
 #pragma once
 #include <vector>
-#include <characters/CharacterBase.h> // abstract or base class for both PlayerCharacter and EnemyCharacter
+#include <characters/CharacterBase.h> // abstract or base class for both PlayerCharacter and Enemy
 
-struct TurnEntry {
-    CharacterBase* actor;
+struct TurnEntry
+{
+    CharacterBase *actor;
     int turnScore;
 };
 
-class TurnSystem {
+class TurnSystem
+{
 public:
-    TurnSystem(const std::vector<CharacterBase*>& allCharacters);
+    TurnSystem(const std::vector<CharacterBase *> &allCharacters);
 
     void calculateTurnOrder();
-    CharacterBase* getNextActor();
+    CharacterBase *getNextActor();
 
 private:
     std::vector<TurnEntry> turnOrder;

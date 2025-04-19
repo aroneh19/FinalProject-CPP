@@ -7,7 +7,7 @@
 #include <fstream>
 #include <battle/Skill.h>
 #include "characters/Character.h"
-#include "characters/EnemyCharacter.h" 
+#include "characters/Enemy.h"
 
 struct Affinity
 {
@@ -26,7 +26,7 @@ public:
 
     // Load methods for each data file
     std::vector<Character> loadCharacters(const std::string &filePath);
-    std::vector<EnemyCharacter> loadEnemyCharacters(const std::string &filePath);
+    std::vector<Enemy> loadEnemys(const std::string &filePath);
     std::vector<Character> loadBosses(const std::string &filePath);
     std::map<std::string, Affinity> loadAffinities(const std::string &filePath);
 
@@ -37,5 +37,5 @@ private:
     int extractInt(const std::string &data, const std::string &key);
     std::vector<std::string> splitArrayEntries(const std::string &arrayStr);
     Character parseCharacter(const std::string &characterData);
-    EnemyCharacter parseEnemyCharacter(const std::string &enemyData);
+    Enemy parseEnemy(const std::string &enemyData);
 };

@@ -3,10 +3,11 @@
 
 #include <vector>
 #include <characters/Character.h>
-#include <characters/EnemyCharacter.h>
+#include <characters/Enemy.h>
 #include <game/Team.h>
 
-class UiBattle {
+class UiBattle
+{
 public:
-    void BattleStart(Team& team, const std::vector<EnemyCharacter>& enemies, int wave, int round);
+    void BattleStart(Team &team, const std::vector<Enemy> &enemies, int wave, int round);
 };

@@ -31,14 +31,18 @@ std::string JsonLoader::extractString(const std::string &data, const std::string
 {
     std::string searchKey = "\"" + key + "\"";
     size_t keyPos = data.find(searchKey);
-    if (keyPos == std::string::npos) return "";
+    if (keyPos == std::string::npos)
+        return "";
     size_t colonPos = data.find(":", keyPos);
-    if (colonPos == std::string::npos) return "";
+    if (colonPos == std::string::npos)
+        return "";
     size_t valueStartPos = data.find("\"", colonPos);
-    if (valueStartPos == std::string::npos) return "";
+    if (valueStartPos == std::string::npos)
+        return "";
     valueStartPos++;
     size_t valueEndPos = data.find("\"", valueStartPos);
-    if (valueEndPos == std::string::npos) return "";
+    if (valueEndPos == std::string::npos)
+        return "";
     return data.substr(valueStartPos, valueEndPos - valueStartPos);
 }
 
@@ -46,9 +50,11 @@ int JsonLoader::extractInt(const std::string &data, const std::string &key)
 {
     std::string searchKey = "\"" + key + "\"";
     size_t keyPos = data.find(searchKey);
-    if (keyPos == std::string::npos) return 0;
+    if (keyPos == std::string::npos)
+        return 0;
     size_t colonPos = data.find(":", keyPos);
-    if (colonPos == std::string::npos) return 0;
+    if (colonPos == std::string::npos)
+        return 0;
     size_t valueStartPos = colonPos + 1;
     while (valueStartPos < data.length() &&
            (data[valueStartPos] == ' ' || data[valueStartPos] == '\t' ||
@@ -57,11 +63,15 @@ int JsonLoader::extractInt(const std::string &data, const std::string &key)
         valueStartPos++;
     }
     size_t valueEndPos = data.find_first_of(",}]", valueStartPos);
-    if (valueEndPos == std::string::npos) return 0;
+    if (valueEndPos == std::string::npos)
+        return 0;
     std::string valueStr = data.substr(valueStartPos, valueEndPos - valueStartPos);
-    try {
+    try
+    {
         return std::stoi(valueStr);
-    } catch (const std::exception &) {
+    }
+    catch (const std::exception &)
+    {
         return 0;
     }
 }
@@ -70,16 +80,20 @@ std::vector<std::string> JsonLoader::splitArrayEntries(const std::string &arrayS
 {
     std::vector<std::string> results;
     size_t startPos = arrayStr.find('[');
-    if (startPos == std::string::npos) return results;
+    if (startPos == std::string::npos)
+        return results;
     size_t endPos = arrayStr.find_last_of(']');
-    if (endPos == std::string::npos) return results;
+    if (endPos == std::string::npos)
+        return results;
     std::string contentStr = arrayStr.substr(startPos + 1, endPos - startPos - 1);
     int braceCount = 0;
     size_t itemStart = 0;
     for (size_t i = 0; i < contentStr.length(); i++)
     {
-        if (contentStr[i] == '{') braceCount++;
-        else if (contentStr[i] == '}') braceCount--;
+        if (contentStr[i] == '{')
+            braceCount++;
+        else if (contentStr[i] == '}')
+            braceCount--;
         else if (contentStr[i] == ',' && braceCount == 0)
         {
             std::string item = contentStr.substr(itemStart, i - itemStart);
@@ -118,7 +132,8 @@ Character JsonLoader::parseCharacter(const std::string &characterData)
         }
     }
     size_t skillsStart = characterData.find("\"skills\"");
-    if (skillsStart == std::string::npos) skillsStart = characterData.find("\"skill\"");
+    if (skillsStart == std::string::npos)
+        skillsStart = characterData.find("\"skill\"");
     if (skillsStart != std::string::npos)
     {
         size_t skillBlockStart = characterData.find("{", skillsStart);
@@ -134,9 +149,9 @@ Character JsonLoader::parseCharacter(const std::string &characterData)
     return character;
 }
 
-EnemyCharacter JsonLoader::parseEnemyCharacter(const std::string &data)
+Enemy JsonLoader::parseEnemy(const std::string &data)
 {
-    EnemyCharacter e;
+    Enemy e;
     e.name = extractString(data, "name");
     e.affinity = extractString(data, "affinity");
     e.stats.hp = extractInt(data, "hp");
@@ -174,14 +189,14 @@ std::vector<Character> JsonLoader::loadCharacters(const std::string &filePath)
     return characters;
 }
 
-std::vector<EnemyCharacter> JsonLoader::loadEnemyCharacters(const std::string &filePath)
+std::vector<Enemy> JsonLoader::loadEnemys(const std::string &filePath)
 {
-    std::vector<EnemyCharacter> enemies;
+    std::vector<Enemy> enemies;
     std::string jsonData = readFileToString(filePath);
     std::vector<std::string> entries = splitArrayEntries(jsonData);
     for (const auto &entry : entries)
     {
-        enemies.push_back(parseEnemyCharacter(entry));
+        enemies.push_back(parseEnemy(entry));
     }
     return enemies;
 }
@@ -196,10 +211,12 @@ std::map<std::string, Affinity> JsonLoader::loadAffinities(const std::string &fi
     std::map<std::string, Affinity> affinityMap;
     std::string jsonData = readFileToString(filePath);
     size_t affinitiesStart = jsonData.find("\"affinities\"");
-    if (affinitiesStart == std::string::npos) return affinityMap;
+    if (affinitiesStart == std::string::npos)
+        return affinityMap;
     size_t arrayStart = jsonData.find("[", affinitiesStart);
     size_t arrayEnd = jsonData.find_last_of("]");
-    if (arrayStart == std::string::npos || arrayEnd == std::string::npos) return affinityMap;
+    if (arrayStart == std::string::npos || arrayEnd == std::string::npos)
+        return affinityMap;
     std::string affinitiesArray = jsonData.substr(arrayStart, arrayEnd - arrayStart + 1);
     std::vector<std::string> affinityEntries = splitArrayEntries(affinitiesArray);
     for (const auto &entry : affinityEntries)
