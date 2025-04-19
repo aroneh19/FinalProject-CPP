@@ -32,7 +32,7 @@ void UiBattle::BattleStart(Team &team)
         int filled = static_cast<int>((static_cast<float>(s.hp) / maxHp) * barLength);
         std::string bar = std::string(filled, '#') + std::string(barLength - filled, '-');
 
-        std::cout << hero.icon << " " << std::setw(12) << std::left << hero.name
+        std::cout << std::setw(12) << std::left << hero.name
                   << " " << hero.affinity << " HP [" << bar << "] " << s.hp << "/" << maxHp
                   << " | CD: 0"
                   << "\n";

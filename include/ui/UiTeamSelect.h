@@ -8,7 +8,7 @@
 class UiTeamSelect
 {
 public:
-    Team Start();
+    void Start();
     void displayTeams(const std::string &role, Team &team);    
     void selectTeam(Team &team);
 };
