@@ -8,6 +8,7 @@
 #include <vector>
 #include "ui/UiTeamSelect.h"
 #include <limits>
+#include "ui/UiBattle.h" 
 
 void UiMenu::Start()
 {
@@ -62,6 +63,10 @@ void UiMenu::StartNewGame()
 {
     UiTeamSelect teamSelect;
     teamSelect.Start();
+    Team team = teamSelect.Start();
+
+    UiBattle battle;
+    battle.BattleStart(team);
 }
 
 void UiMenu::LoadGame()

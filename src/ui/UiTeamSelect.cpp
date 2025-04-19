@@ -7,13 +7,14 @@
 #include <vector>
 #include "game/Team.h"
 
-void UiTeamSelect::Start()
+Team UiTeamSelect::Start()
 {
     Team team;
     displayTeams("Front", team);
     displayTeams("Back", team);
     int hallo;
     std::cin >> hallo;
+    return team;
 }
 
 void UiTeamSelect::displayTeams(const std::string &role, Team &team)
