@@ -1,7 +1,6 @@
 [
 	{
 		"name": "Zombie",
-		"icon": "🧟",
 		"affinity": "WTR",
 		"stats": { "hp": 110, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
 		"skills": {
@@ -13,7 +12,6 @@
 	},
 	{
 		"name": "Wolf",
-		"icon": "🐺",
 		"affinity": "ERT",
 		"stats": { "hp": 100, "atk": 8, "def": 5, "spd": 9, "lck": 6 },
 		"skills": {
@@ -25,7 +23,6 @@
 	},
 	{
 		"name": "Cave Spider",
-		"icon": "🕷️",
 		"affinity": "WTR",
 		"stats": { "hp": 105, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
 		"skills": {
@@ -37,7 +34,6 @@
 	},
 	{
 		"name": "Skeleton Warrior",
-		"icon": "💀",
 		"affinity": "LGT",
 		"stats": { "hp": 115, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
 		"skills": {
@@ -49,7 +45,6 @@
 	},
 	{
 		"name": "Plague Rat",
-		"icon": "🐀",
 		"affinity": "WTR",
 		"stats": { "hp": 100, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
 		"skills": {
@@ -61,7 +56,6 @@
 	},
 	{
 		"name": "Dark Acolyte",
-		"icon": "🕯️",
 		"affinity": "FIR",
 		"stats": { "hp": 110, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
 		"skills": {
@@ -73,7 +67,6 @@
 	},
 	{
 		"name": "Dire Wolf",
-		"icon": "🐺",
 		"affinity": "ERT",
 		"stats": { "hp": 120, "atk": 10, "def": 6, "spd": 10, "lck": 7 },
 		"skills": {
@@ -85,7 +78,6 @@
 	},
 	{
 		"name": "Forest Wight",
-		"icon": "🌲",
 		"affinity": "WTR",
 		"stats": { "hp": 125, "atk": 9, "def": 6, "spd": 8, "lck": 8 },
 		"skills": {
@@ -97,7 +89,6 @@
 	},
 	{
 		"name": "Demon Imp",
-		"icon": "😈",
 		"affinity": "FIR",
 		"stats": { "hp": 115, "atk": 10, "def": 5, "spd": 11, "lck": 7 },
 		"skills": {
@@ -109,7 +100,6 @@
 	},
 	{
 		"name": "Cultist",
-		"icon": "🩸",
 		"affinity": "FIR",
 		"stats": { "hp": 110, "atk": 9, "def": 5, "spd": 9, "lck": 9 },
 		"skills": {
@@ -121,7 +111,6 @@
 	},
 	{
 		"name": "Orc Brute",
-		"icon": "👹",
 		"affinity": "FIR",
 		"stats": { "hp": 130, "atk": 11, "def": 6, "spd": 7, "lck": 6 },
 		"skills": {
@@ -133,7 +122,6 @@
 	},
 	{
 		"name": "Ash Stalker",
-		"icon": "🌫️",
 		"affinity": "FIR",
 		"stats": { "hp": 125, "atk": 10, "def": 6, "spd": 10, "lck": 8 },
 		"skills": {
@@ -145,7 +133,6 @@
 	},
 	{
 		"name": "Necromancer",
-		"icon": "☠️",
 		"affinity": "ICE",
 		"stats": { "hp": 120, "atk": 8, "def": 6, "spd": 9, "lck": 10 },
 		"skills": {
@@ -157,7 +144,6 @@
 	},
 	{
 		"name": "Phantom Shade",
-		"icon": "👻",
 		"affinity": "ICE",
 		"stats": { "hp": 125, "atk": 9, "def": 6, "spd": 11, "lck": 11 },
 		"skills": {
@@ -169,7 +155,6 @@
 	},
 	{
 		"name": "Ghoul",
-		"icon": "🧌",
 		"affinity": "WTR",
 		"stats": { "hp": 130, "atk": 10, "def": 7, "spd": 9, "lck": 8 },
 		"skills": {
@@ -181,7 +166,6 @@
 	},
 	{
 		"name": "Thornbeast",
-		"icon": "🌿",
 		"affinity": "ERT",
 		"stats": { "hp": 135, "atk": 11, "def": 7, "spd": 8, "lck": 9 },
 		"skills": {
@@ -193,7 +177,6 @@
 	},
 	{
 		"name": "Stone Guardian",
-		"icon": "🪨",
 		"affinity": "ERT",
 		"stats": { "hp": 140, "atk": 10, "def": 8, "spd": 6, "lck": 7 },
 		"skills": {
@@ -205,7 +188,6 @@
 	},
 	{
 		"name": "Werewolf",
-		"icon": "🐺",
 		"affinity": "WTR",
 		"stats": { "hp": 135, "atk": 12, "def": 7, "spd": 10, "lck": 9 },
 		"skills": {
