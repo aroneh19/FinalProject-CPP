@@ -93,9 +93,9 @@ void UiMenu::ViewCharacters()
 
         std::cout << "| "
                   << std::right << std::setw(2) << i + 1 << " | "
-                  << std::left << std::setw(14) << c.name << " | "
-                  << std::left << std::setw(5) << c.role << " | "
-                  << std::left << std::setw(3) << c.affinity << " | "
+                  << std::left << std::setw(14) << c.getName() << " | "
+                  << std::left << std::setw(5) << c.getRole() << " | "
+                  << std::left << std::setw(3) << c.getAffinity() << " | "
                   << std::right << std::setw(3) << s.hp << " | "
                   << std::right << std::setw(3) << s.atk << " | "
                   << std::right << std::setw(3) << s.def << " | "
