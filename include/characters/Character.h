@@ -1,33 +1,12 @@
 #pragma once
 
-#include <string>
-#include <vector>
-#include "battle/Skill.h"
+#include "characters/CharacterBase.h"
 
-struct Stats
+class Character : public CharacterBase
 {
-    int hp, atk, def, spd, lck;
-};
-
-class Character
-{
-public:
-    std::string name;
-    std::string affinity;
-    std::string description;
     std::string role;
 
-    Stats stats;
-    Skill skill;
-
-    const Stats &getStats() const { return stats; }
-    const std::string &getName() const { return name; }
-    const std::string &getAffinity() const { return affinity; }
-    const Skill &getSkill() const { return skill; }
-
-    void setStats(const Stats &newStats) { stats = newStats; }
-
-    int attack(Character &target);
-    int useSkill(Character &target);
-    int useItem();
+public:
+    const std::string &getRole() const { return role; }
+    void setRole(const std::string &r) { role = r; }
 };

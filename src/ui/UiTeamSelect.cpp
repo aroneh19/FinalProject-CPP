@@ -22,7 +22,7 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
     std::vector<Character> filteredCharacters;
     for (const auto &character : characters)
     {
-        if (character.role == role)
+        if (character.getRole() == role)
         {
             filteredCharacters.push_back(character);
         }
@@ -44,8 +44,8 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
             const Stats &s = c.getStats();
             std::cout << "| "
                       << std::right << std::setw(2) << (i + 1) << " | "
-                      << std::left << std::setw(12) << c.name << " | "
-                      << std::left << std::setw(3) << c.affinity << " | "
+                      << std::left << std::setw(12) << c.getName() << " |  "
+                      << std::left << std::setw(3) << c.getAffinity() << " | "
                       << std::right << std::setw(3) << s.hp << " | "
                       << std::right << std::setw(3) << s.atk << " | "
                       << std::right << std::setw(3) << s.def << " | "

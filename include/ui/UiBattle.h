@@ -1,13 +1,17 @@
-// UiBattle.h
 #pragma once
 
 #include <vector>
-#include <characters/Character.h>
+#include <characters/CharacterBase.h>
 #include <characters/Enemy.h>
 #include <game/Team.h>
 
-class UiBattle
-{
+class UiBattle {
 public:
-    void BattleStart(Team &team, const std::vector<Enemy> &enemies, int wave, int round);
+    void BattleStart(Team& team, const std::vector<Enemy>& enemies, int wave, int round);
+
+private:
+    void DisplayParty(const std::vector<CharacterBase*>& party);
+    void DisplayEnemies(const std::vector<Enemy>& enemies);
+    void DisplayTurnOptions(CharacterBase* actor);
+    void HandleTurn(CharacterBase* actor);  
 };

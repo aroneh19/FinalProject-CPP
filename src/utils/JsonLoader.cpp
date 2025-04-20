@@ -109,69 +109,81 @@ std::vector<std::string> JsonLoader::splitArrayEntries(const std::string &arrayS
     return results;
 }
 
-Character JsonLoader::parseCharacter(const std::string &characterData)
-{
+Character JsonLoader::parseCharacter(const std::string& data) {
     Character character;
-    character.name = extractString(characterData, "name");
-    character.description = extractString(characterData, "description");
-    character.affinity = extractString(characterData, "affinity");
-    character.role = extractString(characterData, "role");
-    size_t statsStart = characterData.find("\"stats\"");
-    if (statsStart != std::string::npos)
-    {
-        size_t statsBlockStart = characterData.find("{", statsStart);
-        size_t statsBlockEnd = characterData.find("}", statsBlockStart);
-        if (statsBlockStart != std::string::npos && statsBlockEnd != std::string::npos)
-        {
-            std::string statsBlock = characterData.substr(statsBlockStart, statsBlockEnd - statsBlockStart + 1);
-            character.stats.hp = extractInt(statsBlock, "hp");
-            character.stats.atk = extractInt(statsBlock, "atk");
-            character.stats.def = extractInt(statsBlock, "def");
-            character.stats.spd = extractInt(statsBlock, "spd");
-            character.stats.lck = extractInt(statsBlock, "lck");
+    character.setName(extractString(data, "name"));
+    character.setAffinity(extractString(data, "affinity"));
+    character.setRole(extractString(data, "role"));
+
+    Stats stats;
+    size_t statsStart = data.find("\"stats\"");
+    if (statsStart != std::string::npos) {
+        size_t blockStart = data.find("{", statsStart);
+        size_t blockEnd = data.find("}", blockStart);
+        if (blockStart != std::string::npos && blockEnd != std::string::npos) {
+            std::string block = data.substr(blockStart, blockEnd - blockStart + 1);
+            stats.hp = extractInt(block, "hp");
+            stats.atk = extractInt(block, "atk");
+            stats.def = extractInt(block, "def");
+            stats.spd = extractInt(block, "spd");
+            stats.lck = extractInt(block, "lck");
         }
     }
-    size_t skillsStart = characterData.find("\"skills\"");
+    character.setStats(stats);
+
+    size_t skillsStart = data.find("\"skills\"");
     if (skillsStart == std::string::npos)
-        skillsStart = characterData.find("\"skill\"");
-    if (skillsStart != std::string::npos)
-    {
-        size_t skillBlockStart = characterData.find("{", skillsStart);
-        size_t skillBlockEnd = characterData.find("}", skillBlockStart);
-        if (skillBlockStart != std::string::npos && skillBlockEnd != std::string::npos)
-        {
-            std::string skillBlock = characterData.substr(skillBlockStart, skillBlockEnd - skillBlockStart + 1);
-            character.skill.name = extractString(skillBlock, "name");
-            character.skill.description = extractString(skillBlock, "description");
-            character.skill.cooldown = extractInt(skillBlock, "cooldown");
+        skillsStart = data.find("\"skill\"");
+
+    if (skillsStart != std::string::npos) {
+        size_t skillBlockStart = data.find("{", skillsStart);
+        size_t skillBlockEnd = data.find("}", skillBlockStart);
+        if (skillBlockStart != std::string::npos && skillBlockEnd != std::string::npos) {
+            std::string block = data.substr(skillBlockStart, skillBlockEnd - skillBlockStart + 1);
+            Skill skill;
+            skill.name = extractString(block, "name");
+            skill.description = extractString(block, "description");
+            skill.cooldown = extractInt(block, "cooldown");
+            character.setSkill(skill);
         }
     }
+
     return character;
 }
 
-Enemy JsonLoader::parseEnemy(const std::string &data)
-{
+Enemy JsonLoader::parseEnemy(const std::string& data) {
     Enemy e;
-    e.name = extractString(data, "name");
-    e.affinity = extractString(data, "affinity");
-    e.stats.hp = extractInt(data, "hp");
-    e.stats.atk = extractInt(data, "atk");
-    e.stats.def = extractInt(data, "def");
-    e.stats.spd = extractInt(data, "spd");
-    e.stats.lck = extractInt(data, "lck");
-    e.tier = extractInt(data, "tier");
+    e.setName(extractString(data, "name"));
+    e.setAffinity(extractString(data, "affinity"));
 
-    size_t skillStart = data.find("\"skills\"");
-    if (skillStart != std::string::npos)
-    {
-        size_t skillBlockStart = data.find("{", skillStart);
-        size_t skillBlockEnd = data.find("}", skillBlockStart);
-        if (skillBlockStart != std::string::npos && skillBlockEnd != std::string::npos)
-        {
-            std::string skillBlock = data.substr(skillBlockStart, skillBlockEnd - skillBlockStart + 1);
-            e.skill.name = extractString(skillBlock, "name");
-            e.skill.description = extractString(skillBlock, "description");
-            e.skill.cooldown = extractInt(skillBlock, "cooldown");
+    Stats stats;
+    size_t statsStart = data.find("\"stats\"");
+    if (statsStart != std::string::npos) {
+        size_t blockStart = data.find("{", statsStart);
+        size_t blockEnd = data.find("}", blockStart);
+        if (blockStart != std::string::npos && blockEnd != std::string::npos) {
+            std::string block = data.substr(blockStart, blockEnd - blockStart + 1);
+            stats.hp = extractInt(block, "hp");
+            stats.atk = extractInt(block, "atk");
+            stats.def = extractInt(block, "def");
+            stats.spd = extractInt(block, "spd");
+            stats.lck = extractInt(block, "lck");
+        }
+    }
+    e.setStats(stats);
+    e.setTier(extractInt(data, "tier"));
+
+    size_t skillsStart = data.find("\"skills\"");
+    if (skillsStart != std::string::npos) {
+        size_t blockStart = data.find("{", skillsStart);
+        size_t blockEnd = data.find("}", blockStart);
+        if (blockStart != std::string::npos && blockEnd != std::string::npos) {
+            std::string block = data.substr(blockStart, blockEnd - blockStart + 1);
+            Skill skill;
+            skill.name = extractString(block, "name");
+            skill.description = extractString(block, "description");
+            skill.cooldown = extractInt(block, "cooldown");
+            e.setSkill(skill);
         }
     }
     return e;
@@ -201,9 +213,9 @@ std::vector<Enemy> JsonLoader::loadEnemys(const std::string &filePath)
     return enemies;
 }
 
-std::vector<Character> JsonLoader::loadBosses(const std::string &filePath)
+std::vector<Enemy> JsonLoader::loadBosses(const std::string &filePath)
 {
-    return loadCharacters(filePath);
+    return loadEnemys(filePath);
 }
 
 std::map<std::string, Affinity> JsonLoader::loadAffinities(const std::string &filePath)
