@@ -1,19 +1,23 @@
 #include "battle/TurnSystem.h"
+#include "characters/CharacterBase.h" // Needed for full definition
 #include <algorithm>
-#include <cstdlib>
 
-TurnSystem::TurnSystem(const std::vector<CharacterBase*>& allCharacters) : currentIndex(0) {
-    for (auto* c : allCharacters) {
-        int score = c->getStats().spd * 2 + rand() % (c->getStats().lck + 1);
-        turnOrder.push_back({ c, score });
-    }
 
-    std::sort(turnOrder.begin(), turnOrder.end(), [](const TurnEntry& a, const TurnEntry& b) {
-        return a.turnScore > b.turnScore;
-    });
+TurnSystem::TurnSystem(const std::vector<CharacterBase*>& allCharacters)
+    : currentIndex(0) {
+    turnOrder = allCharacters;
+
+    std::sort(turnOrder.begin(), turnOrder.end(), [](CharacterBase* a, CharacterBase* b) {
+        if (a->getStats().spd != b->getStats().spd)
+            return a->getStats().spd > b->getStats().spd;
+        return a->getStats().lck > b->getStats().lck;
+    });    
 }
 
 CharacterBase* TurnSystem::getNextActor() {
-    if (currentIndex >= turnOrder.size()) return nullptr;
-    return turnOrder[currentIndex++].actor;
+    if (turnOrder.empty()) return nullptr;
+
+    CharacterBase* actor = turnOrder[currentIndex];
+    currentIndex = (currentIndex + 1) % turnOrder.size();
+    return actor;
 }

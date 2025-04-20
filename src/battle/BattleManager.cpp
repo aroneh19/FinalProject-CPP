@@ -1,9 +1,9 @@
 #include "battle/BattleManager.h"
 #include "ui/UiBattle.h"
 #include "utils/JsonLoader.h"
-#include <algorithm> // for std::shuffle
-#include <random>    // for std::default_random_engine
-#include <ctime>     // for std::time
+#include <algorithm>
+#include <random>
+#include <ctime>     
 
 void BattleManager::startAllWaves(Team &team)
 {

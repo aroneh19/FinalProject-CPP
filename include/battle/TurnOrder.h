@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include <characters/CharacterBase.h> // abstract or base class for both PlayerCharacter and Enemy
+#include <characters/CharacterBase.h>
 
 struct TurnEntry
 {
