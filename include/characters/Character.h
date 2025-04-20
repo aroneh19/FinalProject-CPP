@@ -1,4 +1,3 @@
-#pragma once
 #include "characters/CharacterBase.h"
 
 class Character : public CharacterBase {

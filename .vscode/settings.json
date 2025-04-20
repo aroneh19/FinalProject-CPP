@@ -54,6 +54,9 @@
 		"xtr1common": "cpp",
 		"xtree": "cpp",
 		"xutility": "cpp",
-		"iomanip": "cpp"
+		"iomanip": "cpp",
+		"algorithm": "cpp",
+		"optional": "cpp",
+		"random": "cpp"
 	}
 }
