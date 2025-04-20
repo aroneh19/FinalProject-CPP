@@ -1,22 +1,21 @@
 #pragma once
 
-#include <string>
-#include <vector>
-#include "battle/Skill.h"
-#include "characters/Character.h"
+#include "characters/CharacterBase.h"
+#include "game/Stats.h"
 
-class Enemy
-{
-public:
-    std::string name;
-    std::string affinity;
-    Stats stats;
-    Skill skill;
+
+class Enemy : public CharacterBase {
+private:
     int tier;
 
-    const Stats &getStats() const { return stats; }
-    const std::string &getName() const { return name; }
-    const std::string &getAffinity() const { return affinity; }
-    const Skill &getSkill() const { return skill; }
+public:
+    Enemy() = default;
+
     int getTier() const { return tier; }
+    void setTier(int t) { tier = t; }
+
+    void setStats(const Stats& s) { stats = s; }
+    void setSkill(const Skill& sk) { skill = sk; }
+    void setName(const std::string& n) { name = n; }
+    void setAffinity(const std::string& a) { affinity = a; }
 };

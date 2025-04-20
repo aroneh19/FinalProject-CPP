@@ -4,11 +4,8 @@
 #include <string>
 #include <vector>
 #include "battle/Skill.h"
+#include "game/Stats.h"  
 
-struct Stats
-{
-    int hp, atk, def, spd, lck;
-};
 
 class Character
 {

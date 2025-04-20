@@ -2,7 +2,7 @@
 
 #include <vector>
 
-class CharacterBase;  // Forward declaration
+class CharacterBase;  
 
 class TurnSystem {
 public:

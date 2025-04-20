@@ -3,7 +3,8 @@
 #include "utils/JsonLoader.h"
 #include <algorithm>
 #include <random>
-#include <ctime>     
+#include <ctime>
+#include <characters/Enemy.h>
 
 void BattleManager::startAllWaves(Team &team)
 {
@@ -40,7 +41,6 @@ std::vector<Enemy> BattleManager::generateEnemiesForRound(int waveNumber, int ro
 
     std::vector<Enemy> filtered;
 
-    // Add enemies based on round rules for this wave
     int numEnemies = 3;
     int maxTier = waveNumber;
 
@@ -68,14 +68,10 @@ std::vector<Enemy> BattleManager::generateEnemiesForRound(int waveNumber, int ro
         switch (roundNumber)
         {
         case 1:
-            numEnemies = 3;
-            break;
         case 2:
-            numEnemies = 3;
-            break;
         case 3:
             numEnemies = 3;
-            maxTier = 2;
+            maxTier = (roundNumber == 3) ? 2 : 1;
             break;
         case 4:
             numEnemies = 4;
@@ -88,19 +84,13 @@ std::vector<Enemy> BattleManager::generateEnemiesForRound(int waveNumber, int ro
         switch (roundNumber)
         {
         case 1:
-            numEnemies = 3;
-            maxTier = 2;
-            break;
         case 2:
-            numEnemies = 4;
+            numEnemies = (roundNumber == 1) ? 3 : 4;
             maxTier = 2;
             break;
         case 3:
-            numEnemies = 3;
-            maxTier = 3;
-            break;
         case 4:
-            numEnemies = 4;
+            numEnemies = (roundNumber == 3) ? 3 : 4;
             maxTier = 3;
             break;
         }

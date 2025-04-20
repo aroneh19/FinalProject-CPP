@@ -152,28 +152,34 @@ Character JsonLoader::parseCharacter(const std::string &characterData)
 Enemy JsonLoader::parseEnemy(const std::string &data)
 {
     Enemy e;
-    e.name = extractString(data, "name");
-    e.affinity = extractString(data, "affinity");
-    e.stats.hp = extractInt(data, "hp");
-    e.stats.atk = extractInt(data, "atk");
-    e.stats.def = extractInt(data, "def");
-    e.stats.spd = extractInt(data, "spd");
-    e.stats.lck = extractInt(data, "lck");
-    e.tier = extractInt(data, "tier");
 
-    size_t skillStart = data.find("\"skills\"");
-    if (skillStart != std::string::npos)
-    {
-        size_t skillBlockStart = data.find("{", skillStart);
+    e.setName(extractString(data, "name"));
+    e.setAffinity(extractString(data, "affinity"));
+
+    Stats stats;
+    stats.hp  = extractInt(data, "hp");
+    stats.atk = extractInt(data, "atk");
+    stats.def = extractInt(data, "def");
+    stats.spd = extractInt(data, "spd");
+    stats.lck = extractInt(data, "lck");
+    e.setStats(stats);
+
+    e.setTier(extractInt(data, "tier"));
+
+    Skill skill;
+    size_t skillsStart = data.find("\"skills\"");
+    if (skillsStart != std::string::npos) {
+        size_t skillBlockStart = data.find("{", skillsStart);
         size_t skillBlockEnd = data.find("}", skillBlockStart);
-        if (skillBlockStart != std::string::npos && skillBlockEnd != std::string::npos)
-        {
+        if (skillBlockStart != std::string::npos && skillBlockEnd != std::string::npos) {
             std::string skillBlock = data.substr(skillBlockStart, skillBlockEnd - skillBlockStart + 1);
-            e.skill.name = extractString(skillBlock, "name");
-            e.skill.description = extractString(skillBlock, "description");
-            e.skill.cooldown = extractInt(skillBlock, "cooldown");
+            skill.name = extractString(skillBlock, "name");
+            skill.description = extractString(skillBlock, "description");
+            skill.cooldown = extractInt(skillBlock, "cooldown");
         }
     }
+    e.setSkill(skill);
+
     return e;
 }
 
