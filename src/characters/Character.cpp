@@ -18,6 +18,16 @@ int Character::attack(CharacterBase &target)
 
 int Character::useSkill(CharacterBase &target)
 {
-    // Implement skill usage logic here
-    return 0;
+    if (canUseSkill)
+    {
+        std::cout << getName() << " uses their ultimate skill!\n";
+
+        resetSkill();
+        return 100;
+    }
+    else
+    {
+        std::cout << getName() << " cannot use skill yet. Keep dealing damage!\n";
+        return 0;
+    }
 }

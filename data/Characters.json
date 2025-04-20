@@ -5,7 +5,11 @@
 		"affinity": "LGT",
 		"role": "Back",
 		"stats": { "hp": 160, "atk": 17, "def": 7, "spd": 15, "lck": 11 },
-		"skills": { "name": "Double Shot", "description": "Two random hits.", "cooldown": 0 }
+		"skills": {
+			"name": "Double Shot",
+			"description": "Two random hits.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Assassin",
@@ -13,7 +17,11 @@
 		"affinity": "ICE",
 		"role": "Back",
 		"stats": { "hp": 130, "atk": 16, "def": 4, "spd": 20, "lck": 18 },
-		"skills": { "name": "Shadow Step", "description": "Ignores frontline, high crit chance.", "cooldown": 0 }
+		"skills": {
+			"name": "Shadow Step",
+			"description": "Ignores frontline, high crit chance.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Bard",
@@ -21,7 +29,11 @@
 		"affinity": "LGT",
 		"role": "Back",
 		"stats": { "hp": 160, "atk": 9, "def": 9, "spd": 13, "lck": 16 },
-		"skills": { "name": "Battle Hymn", "description": "Boost SPD for team for 2 turns.", "cooldown": 0 }
+		"skills": {
+			"name": "Battle Hymn",
+			"description": "Boost SPD for team for 2 turns.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Berserker",
@@ -29,7 +41,11 @@
 		"affinity": "FIR",
 		"role": "Front",
 		"stats": { "hp": 220, "atk": 18, "def": 10, "spd": 10, "lck": 8 },
-		"skills": { "name": "Rage Strike", "description": "Deals more damage as HP lowers.", "cooldown": 0 }
+		"skills": {
+			"name": "Rage Strike",
+			"description": "Deals more damage as HP lowers.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Demonbound",
@@ -37,7 +53,11 @@
 		"affinity": "FIR",
 		"role": "Front",
 		"stats": { "hp": 210, "atk": 19, "def": 8, "spd": 11, "lck": 9 },
-		"skills": { "name": "Soulfire Blade", "description": "True damage that bypasses DEF.", "cooldown": 0 }
+		"skills": {
+			"name": "Soulfire Blade",
+			"description": "True damage that bypasses DEF.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Druid",
@@ -45,7 +65,11 @@
 		"affinity": "WTR",
 		"role": "Back",
 		"stats": { "hp": 170, "atk": 8, "def": 10, "spd": 11, "lck": 14 },
-		"skills": { "name": "Rejuvenation", "description": "Heal over time for all allies.", "cooldown": 0 }
+		"skills": {
+			"name": "Rejuvenation",
+			"description": "Heal over time for all allies.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Frost Knight",
@@ -53,7 +77,11 @@
 		"affinity": "ICE",
 		"role": "Front",
 		"stats": { "hp": 240, "atk": 13, "def": 16, "spd": 6, "lck": 5 },
-		"skills": { "name": "Frozen Guard", "description": "Reduces incoming crit chance.", "cooldown": 0 }
+		"skills": {
+			"name": "Frozen Guard",
+			"description": "Reduces incoming crit chance.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Gladiator",
@@ -61,7 +89,11 @@
 		"affinity": "FIR",
 		"role": "Front",
 		"stats": { "hp": 230, "atk": 17, "def": 11, "spd": 9, "lck": 7 },
-		"skills": { "name": "Arena Smash", "description": "Hits frontline + minor bleed.", "cooldown": 0 }
+		"skills": {
+			"name": "Arena Smash",
+			"description": "Hits frontline + minor bleed.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Healer",
@@ -69,7 +101,11 @@
 		"affinity": "WTR",
 		"role": "Back",
 		"stats": { "hp": 150, "atk": 6, "def": 6, "spd": 10, "lck": 17 },
-		"skills": { "name": "Divine Light", "description": "Restores HP to one ally.", "cooldown": 0 }
+		"skills": {
+			"name": "Divine Light",
+			"description": "Restores HP to one ally.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Ice Witch",
@@ -77,7 +113,11 @@
 		"affinity": "ICE",
 		"role": "Back",
 		"stats": { "hp": 140, "atk": 16, "def": 5, "spd": 10, "lck": 13 },
-		"skills": { "name": "Frostbind", "description": "Chance to freeze backline target.", "cooldown": 0 }
+		"skills": {
+			"name": "Frostbind",
+			"description": "Chance to freeze backline target.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Iron Golem",
@@ -85,7 +125,11 @@
 		"affinity": "ERT",
 		"role": "Front",
 		"stats": { "hp": 300, "atk": 12, "def": 20, "spd": 4, "lck": 3 },
-		"skills": { "name": "Stone Slam", "description": "AoE attack, slow but powerful.", "cooldown": 0 }
+		"skills": {
+			"name": "Stone Slam",
+			"description": "AoE attack, slow but powerful.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Knight",
@@ -93,7 +137,11 @@
 		"affinity": "ERT",
 		"role": "Front",
 		"stats": { "hp": 260, "atk": 12, "def": 17, "spd": 7, "lck": 4 },
-		"skills": { "name": "Shield Bash", "description": "Attacks + chance to stun.", "cooldown": 0 }
+		"skills": {
+			"name": "Shield Bash",
+			"description": "Attacks + chance to stun.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Mage",
@@ -101,7 +149,11 @@
 		"affinity": "LGT",
 		"role": "Back",
 		"stats": { "hp": 140, "atk": 20, "def": 5, "spd": 12, "lck": 10 },
-		"skills": { "name": "Arcane Storm", "description": "AoE magic blast.", "cooldown": 0 }
+		"skills": {
+			"name": "Arcane Storm",
+			"description": "AoE magic blast.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Monk",
@@ -109,7 +161,11 @@
 		"affinity": "LGT",
 		"role": "Front",
 		"stats": { "hp": 230, "atk": 14, "def": 12, "spd": 13, "lck": 10 },
-		"skills": { "name": "Chi Barrier", "description": "Buff DEF for the whole team.", "cooldown": 0 }
+		"skills": {
+			"name": "Chi Barrier",
+			"description": "Buff DEF for the whole team.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Paladin",
@@ -117,7 +173,11 @@
 		"affinity": "LGT",
 		"role": "Front",
 		"stats": { "hp": 280, "atk": 10, "def": 18, "spd": 6, "lck": 6 },
-		"skills": { "name": "Divine Shield", "description": "Reduces damage taken for 2 turns.", "cooldown": 0 }
+		"skills": {
+			"name": "Divine Shield",
+			"description": "Reduces damage taken for 2 turns.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Pyromancer",
@@ -125,7 +185,11 @@
 		"affinity": "FIR",
 		"role": "Back",
 		"stats": { "hp": 150, "atk": 19, "def": 6, "spd": 11, "lck": 10 },
-		"skills": { "name": "Inferno", "description": "Burn damage over 3 turns.", "cooldown": 0 }
+		"skills": {
+			"name": "Inferno",
+			"description": "Burn damage over 3 turns.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Sentinel",
@@ -133,7 +197,11 @@
 		"affinity": "LGT",
 		"role": "Front",
 		"stats": { "hp": 250, "atk": 10, "def": 16, "spd": 6, "lck": 7 },
-		"skills": { "name": "Spell Reflect", "description": "Returns 25% damage for 2 turns.", "cooldown": 0 }
+		"skills": {
+			"name": "Spell Reflect",
+			"description": "Returns 25% damage for 2 turns.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Sniper",
@@ -141,7 +209,11 @@
 		"affinity": "LGT",
 		"role": "Back",
 		"stats": { "hp": 150, "atk": 18, "def": 6, "spd": 14, "lck": 15 },
-		"skills": { "name": "Headshot", "description": "High crit, chance to instantly KO weak targets.", "cooldown": 0 }
+		"skills": {
+			"name": "Headshot",
+			"description": "High crit, chance to instantly KO weak targets.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Valkyrie",
@@ -149,7 +221,11 @@
 		"affinity": "ICE",
 		"role": "Front",
 		"stats": { "hp": 240, "atk": 15, "def": 12, "spd": 10, "lck": 8 },
-		"skills": { "name": "Heaven's Wrath", "description": "Hits all enemies in front line.", "cooldown": 0 }
+		"skills": {
+			"name": "Heaven's Wrath",
+			"description": "Hits all enemies in front line.",
+			"cooldown": 0
+		}
 	},
 	{
 		"name": "Warlock",
@@ -157,6 +233,10 @@
 		"affinity": "FIR",
 		"role": "Back",
 		"stats": { "hp": 150, "atk": 12, "def": 7, "spd": 9, "lck": 14 },
-		"skills": { "name": "Curse of Weakness", "description": "Debuff enemy ATK.", "cooldown": 0 }
+		"skills": {
+			"name": "Curse of Weakness",
+			"description": "Debuff enemy ATK.",
+			"cooldown": 0
+		}
 	}
 ]

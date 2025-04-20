@@ -104,7 +104,7 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
                           << " (HP: " << enemies[i].getStats().hp << ")\n";
             }
 
-            int targetIndex;
+            size_t targetIndex;
             std::cout << "Enter target number: ";
             std::cin >> targetIndex;
 
@@ -119,6 +119,35 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
             std::cout << actor->getName() << " attacked " << target.getName()
                       << " for " << damage << " damage!\n";
         }
+        else if (choice == 2) // Skill
+        {
+            std::cout << "Choose a target:\n";
+            for (size_t i = 0; i < enemies.size(); ++i)
+            {
+                std::cout << i + 1 << ". " << enemies[i].getName()
+                          << " (HP: " << enemies[i].getStats().hp << ")\n";
+            }
+
+            size_t targetIndex;
+            std::cout << "Enter target number: ";
+            std::cin >> targetIndex;
+
+            if (targetIndex < 1 || targetIndex > enemies.size())
+            {
+                std::cout << "[Error] Invalid target.\n";
+                continue;
+            }
+
+            Enemy &target = const_cast<Enemy &>(enemies[targetIndex - 1]);
+            int damage = actor->useSkill(target);
+            std::cout << actor->getName() << " used a skill on " << target.getName()
+                      << " for " << damage << " damage!\n";
+        }
+        else if (choice == 3) // Item
+        {
+            std::cout << "[Debug] Item usage is not implemented yet.\n";
+        }
+        else
 
         if (choice == 4)
         {
