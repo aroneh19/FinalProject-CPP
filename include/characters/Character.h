@@ -22,7 +22,7 @@ public:
     Stats stats;
     Skill skill;
 
-    const Stats& getStats() const { return stats;}
+    const Stats &getStats() const { return stats; }
     const std::string &getName() const { return name; }
     const std::string &getAffinity() const { return affinity; }
     const Skill &getSkill() const { return skill; }

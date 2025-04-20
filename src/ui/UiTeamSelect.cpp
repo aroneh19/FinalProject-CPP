@@ -12,8 +12,6 @@ Team UiTeamSelect::Start()
     Team team;
     displayTeams("Front", team);
     displayTeams("Back", team);
-    int hallo;
-    std::cin >> hallo;
     return team;
 }
 
@@ -46,7 +44,7 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
             const Stats &s = c.getStats();
             std::cout << "| "
                       << std::right << std::setw(2) << (i + 1) << " | "
-                      << std::left << std::setw(12) << c.name << " |  "
+                      << std::left << std::setw(12) << c.name << " | "
                       << std::left << std::setw(3) << c.affinity << " | "
                       << std::right << std::setw(3) << s.hp << " | "
                       << std::right << std::setw(3) << s.atk << " | "
@@ -55,8 +53,8 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
                       << std::right << std::setw(3) << s.lck << " |\n";
         }
 
-        std::cout << "+----+--------------+--------+-----+-----+-----+-----+-----+\n";
-        std::cout << "Select first character of your team: ";
+        std::cout << "+----+--------------+-----+-----+-----+-----+-----+-----+\n";
+        std::cout << "Select character " << (team.getCharacters().size() + 1) << " of your team: ";
         size_t firstCharacterIndex = 0;
         std::cin >> firstCharacterIndex;
         if (firstCharacterIndex < 1 || firstCharacterIndex > filteredCharacters.size())
