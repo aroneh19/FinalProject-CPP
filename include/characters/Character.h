@@ -1,12 +1,9 @@
 #pragma once
-
 #include "characters/CharacterBase.h"
 
-class Character : public CharacterBase
-{
-    std::string role;
-
+class Character : public CharacterBase {
 public:
-    const std::string &getRole() const { return role; }
-    void setRole(const std::string &r) { role = r; }
+    int attack(CharacterBase& target) override;
+    int useSkill(CharacterBase& target) override;
+    int useItem();
 };

@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include "game/Stats.h"
 #include "battle/Skill.h"
@@ -14,19 +13,16 @@ protected:
 public:
     virtual ~CharacterBase() = default;
 
-    // Getters
     const std::string& getName() const { return name; }
     const std::string& getAffinity() const { return affinity; }
     const Stats& getStats() const { return stats; }
     const Skill& getSkill() const { return skill; }
 
-    // Setters
     void setName(const std::string& n) { name = n; }
     void setAffinity(const std::string& a) { affinity = a; }
     void setStats(const Stats& s) { stats = s; }
     void setSkill(const Skill& sk) { skill = sk; }
 
-    virtual int attack(CharacterBase &target);
-    virtual int useSkill(CharacterBase &target);
-    virtual int useItem() = 0;
+    virtual int attack(CharacterBase& target) = 0;
+    virtual int useSkill(CharacterBase& target) = 0;
 };
