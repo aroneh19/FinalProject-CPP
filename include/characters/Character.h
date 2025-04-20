@@ -1,4 +1,3 @@
-// Character.h
 #pragma once
 
 #include <string>
@@ -12,7 +11,6 @@ struct Stats
 
 class Character
 {
-
 public:
     std::string name;
     std::string affinity;
@@ -26,4 +24,10 @@ public:
     const std::string &getName() const { return name; }
     const std::string &getAffinity() const { return affinity; }
     const Skill &getSkill() const { return skill; }
+
+    void setStats(const Stats &newStats) { stats = newStats; }
+
+    int attack(Character &target);
+    int useSkill(Character &target);
+    int useItem();
 };
