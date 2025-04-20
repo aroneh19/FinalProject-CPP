@@ -1,6 +1,6 @@
-#include "characters/CharacterBase.h"
+#include "characters/Character.h"
 
-int CharacterBase::attack(CharacterBase &target)
+int Character::attack(CharacterBase &target)
 {
     int damage = stats.atk - target.getStats().def;
     if (damage < stats.atk / 3)
@@ -16,12 +16,8 @@ int CharacterBase::attack(CharacterBase &target)
     return damage;
 }
 
-int CharacterBase::useSkill(CharacterBase &target)
+int Character::useSkill(CharacterBase &target)
 {
     // Implement skill usage logic here
-}
-
-int CharacterBase::useItem()
-{
-    // Implement item usage logic here
+    return 0;
 }
