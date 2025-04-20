@@ -64,13 +64,12 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
     for (auto &hero : team.getCharacters())
     {
         std::cout << "  Player: " << hero.getName() << "\n";
-        allCharacters.push_back(const_cast<Character*>(&hero));
-
+        allCharacters.push_back(const_cast<Character *>(&hero));
     }
     for (auto &enemy : enemies)
     {
         std::cout << "  Enemy: " << enemy.getName() << "\n";
-        allCharacters.push_back(const_cast<Enemy*>(&enemy));
+        allCharacters.push_back(const_cast<Enemy *>(&enemy));
     }
 
     TurnSystem turnSystem(allCharacters);
@@ -85,7 +84,8 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
             break;
         }
 
-        std::cout << "\n" << actor->getName() << "'s turn!\n";
+        std::cout << "\n"
+                  << actor->getName() << "'s turn!\n";
         std::cout << "1. Attack\n";
         std::cout << "2. Skill\n";
         std::cout << "3. Item\n";
@@ -94,6 +94,31 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
 
         int choice;
         std::cin >> choice;
+
+        if (choice == 1) // Attack
+        {
+            std::cout << "Choose a target:\n";
+            for (size_t i = 0; i < enemies.size(); ++i)
+            {
+                std::cout << i + 1 << ". " << enemies[i].getName()
+                          << " (HP: " << enemies[i].getStats().hp << ")\n";
+            }
+
+            int targetIndex;
+            std::cout << "Enter target number: ";
+            std::cin >> targetIndex;
+
+            if (targetIndex < 1 || targetIndex > enemies.size())
+            {
+                std::cout << "[Error] Invalid target.\n";
+                continue;
+            }
+
+            Enemy &target = const_cast<Enemy &>(enemies[targetIndex - 1]);
+            int damage = actor->attack(target);
+            std::cout << actor->getName() << " attacked " << target.getName()
+                      << " for " << damage << " damage!\n";
+        }
 
         if (choice == 4)
         {
