@@ -1,5 +1,11 @@
+#pragma once
+
 #include "characters/CharacterBase.h"
 
 class Character : public CharacterBase {
-    // Add player-specific logic later if needed
+    std::string role;
+
+public:
+    const std::string& getRole() const { return role; }
+    void setRole(const std::string& r) { role = r; }
 };

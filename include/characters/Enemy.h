@@ -1,8 +1,9 @@
 #pragma once
+
 #include "characters/CharacterBase.h"
 
 class Enemy : public CharacterBase {
-    int tier;
+    int tier = 1;
 
 public:
     int getTier() const { return tier; }
