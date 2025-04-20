@@ -25,4 +25,8 @@ public:
     void setAffinity(const std::string& a) { affinity = a; }
     void setStats(const Stats& s) { stats = s; }
     void setSkill(const Skill& sk) { skill = sk; }
+
+    virtual int attack(CharacterBase &target);
+    virtual int useSkill(CharacterBase &target);
+    virtual int useItem() = 0;
 };
