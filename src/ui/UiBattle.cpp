@@ -10,17 +10,21 @@
 #include <sstream>
 #include <game/TurnSystem.h>
 
-void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wave, int round)
+void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int round)
 {
     Utils::clearScreen();
     std::cout << "\n";
     std::cout << "╔" << std::string(70, '=') << "╗\n";
-    std::cout << "╚" << std::string(70, '=') << "╝\n\n";
+
     std::stringstream title;
     title << "BATTLE " << wave << " - ROUND " << round;
     int totalWidth = 70;
     int padding = (totalWidth - title.str().length()) / 2;
-    std::cout << "║" << std::string(padding, ' ') << title.str() << std::string(totalWidth - padding - title.str().length(), ' ') << "║\n";
+    std::cout << "║" << std::string(padding, ' ') << title.str()
+            << std::string(totalWidth - padding - title.str().length(), ' ') << "║\n";
+
+    std::cout << "╚" << std::string(70, '=') << "╝\n";
+
 
     std::cout << "\nYour Party\n";
     std::cout << std::string(70, '-') << "\n";
@@ -58,34 +62,27 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
                   << " | CD: 0\n";
     }
 
-    // Prepare turn order
-    std::cout << "\n[TurnSystem] Initializing turn order...\n";
     std::vector<CharacterBase *> allCharacters;
     for (auto &hero : team.getCharacters())
     {
-        std::cout << "  Player: " << hero.getName() << "\n";
         allCharacters.push_back(const_cast<Character *>(&hero));
     }
     for (auto &enemy : enemies)
     {
-        std::cout << "  Enemy: " << enemy.getName() << "\n";
         allCharacters.push_back(const_cast<Enemy *>(&enemy));
     }
 
     TurnSystem turnSystem(allCharacters);
-    std::cout << "[TurnSystem] Turn system initialized successfully.\n";
 
     while (true)
     {
         CharacterBase *actor = turnSystem.getNextActor();
         if (!actor)
         {
-            std::cout << "[Error] Null actor encountered in turn system.\n";
             break;
         }
 
-        std::cout << "\n"
-                  << actor->getName() << "'s turn!\n";
+        std::cout << "\n" << actor->getName() << "'s turn!\n";
         std::cout << "1. Attack\n";
         std::cout << "2. Skill\n";
         std::cout << "4. Quit\n";
@@ -94,7 +91,7 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
         int choice;
         std::cin >> choice;
 
-        if (choice == 1) // Attack
+        if (choice == 1)
         {
             std::cout << "Choose a target:\n";
             for (size_t i = 0; i < enemies.size(); ++i)
@@ -107,13 +104,13 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
             std::cout << "Enter target number: ";
             std::cin >> targetIndex;
 
-            if (targetIndex < 1 || targetIndex > enemies.size())
+            if (targetIndex < 1 || targetIndex > static_cast<int>(enemies.size()))
             {
                 std::cout << "[Error] Invalid target.\n";
                 continue;
             }
 
-            Enemy &target = const_cast<Enemy &>(enemies[targetIndex - 1]);
+            Enemy &target = enemies[targetIndex - 1];
             int damage = actor->attack(target);
             std::cout << actor->getName() << " attacked " << target.getName()
                       << " for " << damage << " damage!\n";
@@ -153,10 +150,6 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
         {
             std::cout << "Exiting battle...\n";
             break;
-        }
-        else
-        {
-            std::cout << "[Debug] You chose option " << choice << "\n";
         }
     }
 }

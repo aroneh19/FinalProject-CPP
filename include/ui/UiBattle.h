@@ -7,7 +7,7 @@
 
 class UiBattle {
 public:
-    void BattleStart(Team& team, const std::vector<Enemy>& enemies, int wave, int round);
+    void BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int round);
 
 private:
     void DisplayParty(const std::vector<CharacterBase*>& party);
