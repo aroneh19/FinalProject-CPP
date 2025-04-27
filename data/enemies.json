@@ -2,7 +2,7 @@
 	{
 		"name": "Zombie",
 		"affinity": "WTR",
-		"stats": { "hp": 110, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
+		"stats": { "hp": 60, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
 		"skills": {
 			"name": "Rotting Bite",
 			"description": "Chance to poison.",
@@ -13,7 +13,7 @@
 	{
 		"name": "Wolf",
 		"affinity": "ERT",
-		"stats": { "hp": 100, "atk": 8, "def": 5, "spd": 9, "lck": 6 },
+		"stats": { "hp": 65, "atk": 8, "def": 5, "spd": 9, "lck": 6 },
 		"skills": {
 			"name": "Pack Bite",
 			"description": "Chance to bleed.",
@@ -24,7 +24,7 @@
 	{
 		"name": "Cave Spider",
 		"affinity": "WTR",
-		"stats": { "hp": 105, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
+		"stats": { "hp": 45, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
 		"skills": {
 			"name": "Web Trap",
 			"description": "Reduces SPD of enemy.",
@@ -35,7 +35,7 @@
 	{
 		"name": "Skeleton Warrior",
 		"affinity": "LGT",
-		"stats": { "hp": 115, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
+		"stats": { "hp": 70, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
 		"skills": {
 			"name": "Bone Slash",
 			"description": "Reduces DEF.",
@@ -46,7 +46,7 @@
 	{
 		"name": "Plague Rat",
 		"affinity": "WTR",
-		"stats": { "hp": 100, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
+		"stats": { "hp": 45, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
 		"skills": {
 			"name": "Filthy Bite",
 			"description": "Small chance to poison.",
@@ -57,7 +57,7 @@
 	{
 		"name": "Dark Acolyte",
 		"affinity": "FIR",
-		"stats": { "hp": 110, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
+		"stats": { "hp": 55, "atk": 8, "def": 5, "spd": 8, "lck": 7 },
 		"skills": {
 			"name": "Soul Leech",
 			"description": "Deals damage and restores small HP.",
