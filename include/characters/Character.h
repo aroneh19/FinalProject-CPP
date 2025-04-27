@@ -17,12 +17,17 @@ public:
     ~Character() override = default;
 
     int attack(CharacterBase &target) override;
-    int useSkill(CharacterBase &target) override;
+
+    int useSkill(CharacterBase &target);
 
     const std::string &getRole() const { return role; }
     void setRole(const std::string &r) { role = r; }
 
     void increaseDamageDealt(int amount) { damageDealt += amount; }
     bool isSkillReady() const { return canUseSkill; }
-    void resetSkill() { canUseSkill = false; damageDealt = 0; }
+    void resetSkill()
+    {
+        canUseSkill = false;
+        damageDealt = 0;
+    }
 };

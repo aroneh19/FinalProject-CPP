@@ -88,7 +88,6 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
                   << actor->getName() << "'s turn!\n";
         std::cout << "1. Attack\n";
         std::cout << "2. Skill\n";
-        std::cout << "3. Item\n";
         std::cout << "4. Quit\n";
         std::cout << "Choose an action: ";
 
@@ -121,34 +120,35 @@ void UiBattle::BattleStart(Team &team, const std::vector<Enemy> &enemies, int wa
         }
         else if (choice == 2) // Skill
         {
-            std::cout << "Choose a target:\n";
-            for (size_t i = 0; i < enemies.size(); ++i)
+            if (Character *character = dynamic_cast<Character *>(actor)) // Check if actor is of type Character
             {
-                std::cout << i + 1 << ". " << enemies[i].getName()
-                          << " (HP: " << enemies[i].getStats().hp << ")\n";
+                std::cout << "Choose a target:\n";
+                for (size_t i = 0; i < enemies.size(); ++i)
+                {
+                    std::cout << i + 1 << ". " << enemies[i].getName()
+                              << " (HP: " << enemies[i].getStats().hp << ")\n";
+                }
+
+                size_t targetIndex;
+                std::cout << "Enter target number: ";
+                std::cin >> targetIndex;
+
+                if (targetIndex < 1 || targetIndex > enemies.size())
+                {
+                    std::cout << "[Error] Invalid target.\n";
+                    continue;
+                }
+
+                Enemy &target = const_cast<Enemy &>(enemies[targetIndex - 1]);
+                int damage = character->useSkill(target);
+                std::cout << character->getName() << " used a skill on " << target.getName()
+                          << " for " << damage << " damage!\n";
             }
-
-            size_t targetIndex;
-            std::cout << "Enter target number: ";
-            std::cin >> targetIndex;
-
-            if (targetIndex < 1 || targetIndex > enemies.size())
+            else
             {
-                std::cout << "[Error] Invalid target.\n";
-                continue;
+                std::cout << actor->getName() << " cannot use a skill!\n";
             }
-
-            Enemy &target = const_cast<Enemy &>(enemies[targetIndex - 1]);
-            int damage = actor->useSkill(target);
-            std::cout << actor->getName() << " used a skill on " << target.getName()
-                      << " for " << damage << " damage!\n";
         }
-        else if (choice == 3) // Item
-        {
-            std::cout << "[Debug] Item usage is not implemented yet.\n";
-        }
-        else
-
         if (choice == 4)
         {
             std::cout << "Exiting battle...\n";

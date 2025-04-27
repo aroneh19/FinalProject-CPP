@@ -24,5 +24,4 @@ public:
     void setSkill(const Skill& sk) { skill = sk; }
 
     virtual int attack(CharacterBase& target) = 0;
-    virtual int useSkill(CharacterBase& target) = 0;
 };

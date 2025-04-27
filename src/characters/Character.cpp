@@ -2,9 +2,7 @@
 
 int Character::attack(CharacterBase &target)
 {
-    int damage = stats.atk - target.getStats().def;
-    if (damage < stats.atk / 3)
-        damage = stats.atk / 3;
+    int damage = stats.atk * stats.atk / target.getStats().def + stats.atk;
 
     Stats targetStats = target.getStats();
     targetStats.hp -= damage;
