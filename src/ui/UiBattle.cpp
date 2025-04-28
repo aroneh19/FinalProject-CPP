@@ -59,7 +59,7 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
 
         std::cout << std::setw(12) << std::left << enemy.getName()
                   << " " << enemy.getAffinity() << " HP [" << bar << "] " << s.hp << "/" << maxHp
-                  << " | CD: 0\n";
+                  << "\n";
     }
 
     std::vector<CharacterBase *> allCharacters;
@@ -99,7 +99,8 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
         }
         else if (Character *character = dynamic_cast<Character *>(actor))
         {
-            std::cout << "\n" << character->getName() << "'s turn!\n";
+            std::cout << "\n"
+                      << character->getName() << "'s turn!\n";
             std::cout << "1. Attack\n";
             std::cout << "2. Skill\n";
             std::cout << "4. Quit\n";
@@ -113,7 +114,8 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                 std::cout << "Choose a target:\n";
                 for (size_t i = 0; i < enemies.size(); ++i)
                 {
-                    if (enemies[i].getStats().hp <= 0) continue;
+                    if (enemies[i].getStats().hp <= 0)
+                        continue;
 
                     std::cout << i + 1 << ". " << enemies[i].getName()
                               << " (HP: " << enemies[i].getStats().hp << ")\n";
