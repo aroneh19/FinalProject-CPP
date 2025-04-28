@@ -10,7 +10,7 @@
 int Character::attack(CharacterBase &target)
 {
     float affinityMultiplier = AffinitySystem::getAffinityMultiplier(this->affinity, target.getAffinity());
-    int damage = static_cast<int>(stats.atk * stats.atk / target.getStats().def * affinityMultiplier);
+    int damage = static_cast<int>(std::pow(stats.atk, 1.5) / target.getStats().def * affinityMultiplier * 2);
 
     if (affinityMultiplier > 1.0f)
     {
