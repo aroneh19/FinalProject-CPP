@@ -14,12 +14,12 @@ void BattleManager::startAllWaves(Team &team)
     }
 }
 
+
 void BattleManager::runWave(int waveNumber, Team &team)
 {
     for (int round = 1; round <= 5; ++round)
     {
         std::vector<Enemy> enemies;
-
         if (round < 5)
         {
             enemies = generateEnemiesForRound(waveNumber, round);

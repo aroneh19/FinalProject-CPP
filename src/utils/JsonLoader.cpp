@@ -123,6 +123,7 @@ Character JsonLoader::parseCharacter(const std::string& data) {
         if (blockStart != std::string::npos && blockEnd != std::string::npos) {
             std::string block = data.substr(blockStart, blockEnd - blockStart + 1);
             stats.hp = extractInt(block, "hp");
+            stats.maxHp = stats.hp;
             stats.atk = extractInt(block, "atk");
             stats.def = extractInt(block, "def");
             stats.spd = extractInt(block, "spd");
@@ -164,6 +165,7 @@ Enemy JsonLoader::parseEnemy(const std::string& data) {
         if (blockStart != std::string::npos && blockEnd != std::string::npos) {
             std::string block = data.substr(blockStart, blockEnd - blockStart + 1);
             stats.hp = extractInt(block, "hp");
+            stats.maxHp = stats.hp;
             stats.atk = extractInt(block, "atk");
             stats.def = extractInt(block, "def");
             stats.spd = extractInt(block, "spd");
