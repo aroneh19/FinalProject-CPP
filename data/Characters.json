@@ -8,7 +8,8 @@
 		"skills": {
 			"name": "Double Shot",
 			"description": "Two random hits.",
-			"cooldown": 0
+			"cooldown": 3,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -20,7 +21,8 @@
 		"skills": {
 			"name": "Shadow Step",
 			"description": "Ignores frontline, high crit chance.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -32,7 +34,8 @@
 		"skills": {
 			"name": "Battle Hymn",
 			"description": "Boost SPD for team for 2 turns.",
-			"cooldown": 0
+			"cooldown": 5,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -44,7 +47,8 @@
 		"skills": {
 			"name": "Rage Strike",
 			"description": "Deals more damage as HP lowers.",
-			"cooldown": 0
+			"cooldown": 3,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -56,7 +60,8 @@
 		"skills": {
 			"name": "Soulfire Blade",
 			"description": "True damage that bypasses DEF.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -68,7 +73,8 @@
 		"skills": {
 			"name": "Rejuvenation",
 			"description": "Heal over time for all allies.",
-			"cooldown": 0
+			"cooldown": 5,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -80,7 +86,8 @@
 		"skills": {
 			"name": "Frozen Guard",
 			"description": "Reduces incoming crit chance.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -92,7 +99,8 @@
 		"skills": {
 			"name": "Arena Smash",
 			"description": "Hits frontline + minor bleed.",
-			"cooldown": 0
+			"cooldown": 3,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -104,7 +112,8 @@
 		"skills": {
 			"name": "Divine Light",
 			"description": "Restores HP to one ally.",
-			"cooldown": 0
+			"cooldown": 3,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -116,7 +125,8 @@
 		"skills": {
 			"name": "Frostbind",
 			"description": "Chance to freeze backline target.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -128,7 +138,8 @@
 		"skills": {
 			"name": "Stone Slam",
 			"description": "AoE attack, slow but powerful.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -140,7 +151,8 @@
 		"skills": {
 			"name": "Shield Bash",
 			"description": "Attacks + chance to stun.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -152,7 +164,8 @@
 		"skills": {
 			"name": "Arcane Storm",
 			"description": "AoE magic blast.",
-			"cooldown": 0
+			"cooldown": 5,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -164,7 +177,8 @@
 		"skills": {
 			"name": "Chi Barrier",
 			"description": "Buff DEF for the whole team.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -176,7 +190,8 @@
 		"skills": {
 			"name": "Divine Shield",
 			"description": "Reduces damage taken for 2 turns.",
-			"cooldown": 0
+			"cooldown": 5,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -188,7 +203,8 @@
 		"skills": {
 			"name": "Inferno",
 			"description": "Burn damage over 3 turns.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -200,7 +216,8 @@
 		"skills": {
 			"name": "Spell Reflect",
 			"description": "Returns 25% damage for 2 turns.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -212,7 +229,8 @@
 		"skills": {
 			"name": "Headshot",
 			"description": "High crit, chance to instantly KO weak targets.",
-			"cooldown": 0
+			"cooldown": 5,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -224,7 +242,8 @@
 		"skills": {
 			"name": "Heaven's Wrath",
 			"description": "Hits all enemies in front line.",
-			"cooldown": 0
+			"cooldown": 4,
+			"currentCooldown": 0
 		}
 	},
 	{
@@ -236,7 +255,8 @@
 		"skills": {
 			"name": "Curse of Weakness",
 			"description": "Debuff enemy ATK.",
-			"cooldown": 0
+			"cooldown": 3,
+			"currentCooldown": 0
 		}
 	}
 ]

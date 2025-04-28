@@ -9,11 +9,6 @@
 			"def": 12,
 			"spd": 8,
 			"lck": 7
-		},
-		"skills": {
-			"name": "Stompquake",
-			"description": "AoE that stuns frontline.",
-			"cooldown": 3
 		}
 	},
 	{
@@ -26,11 +21,6 @@
 			"def": 13,
 			"spd": 9,
 			"lck": 9
-		},
-		"skills": {
-			"name": "Frozen Avalanche",
-			"description": "AoE + Freeze chance.",
-			"cooldown": 3
 		}
 	},
 	{
@@ -43,11 +33,6 @@
 			"def": 12,
 			"spd": 12,
 			"lck": 11
-		},
-		"skills": {
-			"name": "Temporal Rift",
-			"description": "Delays enemy actions.",
-			"cooldown": 3
 		}
 	},
 	{
@@ -60,11 +45,6 @@
 			"def": 14,
 			"spd": 11,
 			"lck": 12
-		},
-		"skills": {
-			"name": "Bone Storm",
-			"description": "Hits all enemies and summons skeletons.",
-			"cooldown": 4
 		}
 	},
 	{
@@ -77,11 +57,6 @@
 			"def": 15,
 			"spd": 13,
 			"lck": 14
-		},
-		"skills": {
-			"name": "Hellfire Wave",
-			"description": "AoE fire damage + Burn.",
-			"cooldown": 4
 		}
 	}
 ]

@@ -6,15 +6,6 @@
 #include <ctime>
 #include <cmath>
 
-// Seed random number generator once
-struct RandomSeeder
-{
-    RandomSeeder()
-    {
-        srand(time(0));
-    }
-} randomSeeder; // Setja í Utils ef hægt
-
 int Character::attack(CharacterBase &target)
 {
     int damage = stats.atk * stats.atk / target.getStats().def;
