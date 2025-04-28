@@ -2,7 +2,7 @@
 	{
 		"name": "Zombie",
 		"affinity": "WTR",
-		"stats": { "hp": 60, "atk": 7, "def": 6, "spd": 11, "lck": 5 },
+		"stats": { "hp": 100, "atk": 7, "def": 6, "spd": 11, "lck": 5 },
 		"tier": 1
 	},
 	{
