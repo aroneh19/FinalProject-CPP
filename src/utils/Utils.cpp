@@ -4,7 +4,6 @@
 
 namespace Utils {
     void clearScreen() {
-        // Clear the console screen
         #ifdef _WIN32
             system("cls");
         #else

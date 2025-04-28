@@ -117,7 +117,6 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
             }
             else if (choice == 2)
             {
-                // Check if skill is ready
                 if (character->getCurrentCooldown() < character->getSkillCooldown())
                 {
                     std::cout << "Skill is not ready! ("
@@ -127,16 +126,13 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                     continue;
                 }
 
-                // Show skill info
                 const Skill &skill = character->getSkill();
                 std::cout << "\nSkill: " << skill.name << "\n";
                 std::cout << "Description: " << skill.description << "\n";
 
-                // Get valid targets based on skill target type
                 if (skill.name == "Divine Light" || skill.name == "Chi Barrier" ||
                     skill.name == "Divine Shield" || skill.name == "Rejuvenation")
                 {
-                    // Healing/buff skills target allies
                     std::map<int, Character *> aliveAllies;
                     int idx = 1;
                     for (auto &hero : team.getCharacters())
@@ -172,7 +168,6 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                 }
                 else
                 {
-                    // Damage skills target enemies
                     std::map<int, Enemy *> aliveEnemies;
                     int idx = 1;
                     for (auto &enemy : enemies)
@@ -208,7 +203,6 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                     }
                 }
                 std::this_thread::sleep_for(std::chrono::milliseconds(1500));
-                std::cout << character->getName() << " tries to use a skill (not implemented yet).\n";
                 std::this_thread::sleep_for(std::chrono::milliseconds(1500));
                 continue;
             }

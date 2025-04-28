@@ -35,5 +35,5 @@ private:
     std::vector<std::string> splitArrayEntries(const std::string &arrayStr);
 
     Character parseCharacter(const std::string &characterData);
-    Enemy parseEnemy(const std::string &data);  // ← NEW declaration
+    Enemy parseEnemy(const std::string &data);  
 };

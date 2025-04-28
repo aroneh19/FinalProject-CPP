@@ -37,7 +37,6 @@ bool WaveManager::isWaveComplete() const
     return currentRound > 5;
 }
 
-// Example: Tier is equal to wave number (1–3)
 int WaveManager::getEnemyTier() const
 {
     return currentWave;
