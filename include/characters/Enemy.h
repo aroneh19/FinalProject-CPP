@@ -16,7 +16,7 @@ public:
     void setTier(int t) { tier = t; }
 
     int attack(CharacterBase &target) override;
-    // int useSkill(CharacterBase &target) override; 
 
-    Character& chooseTarget(std::vector<Character>& heroes);
+    Character* chooseTarget(std::vector<Character*>& heroes);
+
 };

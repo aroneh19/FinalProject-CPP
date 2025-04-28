@@ -4,20 +4,28 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+#include <cstdlib>
 #include <characters/Enemy.h>
 
 void BattleManager::startAllWaves(Team &team)
 {
-    for (int wave = 1; wave <= 3; ++wave)
+    for (int wave = 1; wave <= 5; ++wave)
     {
         runWave(wave, team);
     }
+
+    std::cout << "\nCongratulations! You completed all 5 waves!\n";
+    std::cout << "Press Enter to exit the game...\n";
+    std::cin.ignore();
+    std::cin.get();
+
+    std::exit(0);
 }
 
 
 void BattleManager::runWave(int waveNumber, Team &team)
 {
-    for (int round = 1; round <= 5; ++round)
+    for (int round = 1; round <= 5; ++round)  // <-- 5 rounds per wave
     {
         std::vector<Enemy> enemies;
         if (round < 5)
@@ -33,6 +41,7 @@ void BattleManager::runWave(int waveNumber, Team &team)
         ui.BattleStart(team, enemies, waveNumber, round);
     }
 }
+
 
 std::vector<Enemy> BattleManager::generateEnemiesForRound(int waveNumber, int roundNumber)
 {
@@ -117,13 +126,11 @@ std::vector<Enemy> BattleManager::generateEnemiesForRound(int waveNumber, int ro
 std::vector<Enemy> BattleManager::generateBossForWave(int waveNumber)
 {
     JsonLoader loader;
-    std::vector<Enemy> allBosses = loader.loadEnemys("data/Bosses.json");
+    std::vector<Enemy> allBosses = loader.loadBosses("data/Bosses.json"); // <<< FIX HERE
     std::vector<Enemy> filtered;
 
-    for (const auto &e : allBosses)
-    {
-        if (e.getTier() == waveNumber)
-        {
+    for (const auto &e : allBosses) {
+        if (e.getTier() == waveNumber) {
             filtered.push_back(e);
         }
     }

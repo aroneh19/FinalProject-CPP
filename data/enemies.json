@@ -2,7 +2,7 @@
 	{
 		"name": "Zombie",
 		"affinity": "WTR",
-		"stats": { "hp": 60, "atk": 7, "def": 6, "spd": 6, "lck": 5 },
+		"stats": { "hp": 60, "atk": 7, "def": 6, "spd": 11, "lck": 5 },
 		"tier": 1
 	},
 	{
@@ -14,11 +14,11 @@
 	{
 		"name": "Cave Spider",
 		"affinity": "WTR",
-		"stats": { "hp": 45, "atk": 7, "def": 4, "spd": 10, "lck": 6 },
+		"stats": { "hp": 45, "atk": 7, "def": 4, "spd": 17, "lck": 15 },
 		"tier": 1
 	},
 	{
-		"name": "Skeleton Warrior",
+		"name": "Skeleton",
 		"affinity": "LGT",
 		"stats": { "hp": 70, "atk": 9, "def": 6, "spd": 7, "lck": 7 },
 		"tier": 1
@@ -38,37 +38,37 @@
 	{
 		"name": "Dire Wolf",
 		"affinity": "ERT",
-		"stats": { "hp": 120, "atk": 10, "def": 6, "spd": 10, "lck": 7 },
+		"stats": { "hp": 100, "atk": 10, "def": 6, "spd": 10, "lck": 7 },
 		"tier": 2
 	},
 	{
 		"name": "Forest Wight",
 		"affinity": "WTR",
-		"stats": { "hp": 125, "atk": 9, "def": 6, "spd": 8, "lck": 8 },
+		"stats": { "hp": 105, "atk": 9, "def": 6, "spd": 8, "lck": 8 },
 		"tier": 2
 	},
 	{
 		"name": "Demon Imp",
 		"affinity": "FIR",
-		"stats": { "hp": 115, "atk": 10, "def": 5, "spd": 11, "lck": 7 },
+		"stats": { "hp": 95, "atk": 10, "def": 5, "spd": 11, "lck": 7 },
 		"tier": 2
 	},
 	{
 		"name": "Cultist",
 		"affinity": "FIR",
-		"stats": { "hp": 110, "atk": 9, "def": 5, "spd": 9, "lck": 9 },
+		"stats": { "hp": 100, "atk": 9, "def": 5, "spd": 9, "lck": 9 },
 		"tier": 2
 	},
 	{
 		"name": "Orc Brute",
 		"affinity": "FIR",
-		"stats": { "hp": 130, "atk": 11, "def": 6, "spd": 7, "lck": 6 },
+		"stats": { "hp": 100, "atk": 11, "def": 6, "spd": 7, "lck": 6 },
 		"tier": 2
 	},
 	{
 		"name": "Ash Stalker",
 		"affinity": "FIR",
-		"stats": { "hp": 125, "atk": 10, "def": 6, "spd": 10, "lck": 8 },
+		"stats": { "hp": 125, "atk": 10, "def": 6, "spd": 14, "lck": 13 },
 		"tier": 2
 	},
 	{
@@ -86,7 +86,7 @@
 	{
 		"name": "Ghoul",
 		"affinity": "WTR",
-		"stats": { "hp": 130, "atk": 10, "def": 7, "spd": 9, "lck": 8 },
+		"stats": { "hp": 120, "atk": 10, "def": 7, "spd": 9, "lck": 8 },
 		"tier": 3
 	},
 	{

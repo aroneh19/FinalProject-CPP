@@ -1,62 +1,62 @@
 [
-	{
-		"name": "Troll Warlord",
-		"role": "",
-		"affinity": "ERT",
-		"stats": {
-			"hp": 250,
-			"atk": 14,
-			"def": 12,
-			"spd": 8,
-			"lck": 7
-		}
-	},
-	{
-		"name": "Frost Giant",
-		"role": "",
-		"affinity": "ICE",
-		"stats": {
-			"hp": 270,
-			"atk": 15,
-			"def": 13,
-			"spd": 9,
-			"lck": 9
-		}
-	},
-	{
-		"name": "Arcane Sentinel",
-		"role": "",
-		"affinity": "LGT",
-		"stats": {
-			"hp": 290,
-			"atk": 13,
-			"def": 12,
-			"spd": 12,
-			"lck": 11
-		}
-	},
-	{
-		"name": "Undead Dragon",
-		"role": "",
-		"affinity": "ICE",
-		"stats": {
-			"hp": 320,
-			"atk": 17,
-			"def": 14,
-			"spd": 11,
-			"lck": 12
-		}
-	},
-	{
-		"name": "Demon Lord",
-		"role": "",
-		"affinity": "FIR",
-		"stats": {
-			"hp": 350,
-			"atk": 19,
-			"def": 15,
-			"spd": 13,
-			"lck": 14
-		}
-	}
+    {
+        "name": "Skeleton King",
+        "affinity": "ERT",
+        "tier": 1,
+        "stats": {
+            "hp": 300,
+            "atk": 25,
+            "def": 20,
+            "spd": 12,
+            "lck": 10
+        }
+    },
+    {
+        "name": "Frozen Lich",
+        "affinity": "ICE",
+        "tier": 2,
+        "stats": {
+            "hp": 280,
+            "atk": 27,
+            "def": 18,
+            "spd": 14,
+            "lck": 12
+        }
+    },
+    {
+        "name": "Demon Lord",
+        "affinity": "FIR",
+        "tier": 3,
+        "stats": {
+            "hp": 400,
+            "atk": 30,
+            "def": 28,
+            "spd": 18,
+            "lck": 15
+        }
+    },
+    {
+        "name": "Storm Serpent",
+        "affinity": "WTR",
+        "tier": 4,
+        "stats": {
+            "hp": 370,
+            "atk": 28,
+            "def": 26,
+            "spd": 20,
+            "lck": 17
+        }
+    },
+    {
+        "name": "Dragon King",
+        "affinity": "LGT",
+        "tier": 5,
+        "stats": {
+            "hp": 500,
+            "atk": 30,
+            "def": 30,
+            "spd": 22,
+            "lck": 20
+        }
+    }
 ]

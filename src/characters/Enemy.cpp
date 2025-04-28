@@ -2,39 +2,36 @@
 #include "utils/AffinityUtils.h"
 #include <limits>
 
-Character& Enemy::chooseTarget(std::vector<Character>& heroes) {
+Character* Enemy::chooseTarget(std::vector<Character*>& heroes) {
     Character* bestTarget = nullptr;
-    int bestScore = std::numeric_limits<int>::min(); 
+    int bestScore = std::numeric_limits<int>::min();
 
-    for (auto& hero : heroes) {
+    for (auto* hero : heroes) {
         int score = 0;
-
-        if (AffinityUtils::isWeakAgainst(hero.getAffinity(), this->getAffinity())) {
+        if (AffinityUtils::isWeakAgainst(hero->getAffinity(), this->getAffinity())) {
             score += 10;
         }
-
-        if (hero.getStats().hp < 0.3 * 100) { // Assume average HP, tweak later if needed
+        if (hero->getStats().hp < 0.3 * hero->getStats().maxHp) {
             score += 5;
         }
-
-        score += (1000 - hero.getStats().hp);
+        score += (1000 - hero->getStats().hp);
 
         if (score > bestScore) {
             bestScore = score;
-            bestTarget = &hero;
+            bestTarget = hero;
         }
     }
 
-    if (!bestTarget) {
-        return heroes[0];
+    if (!bestTarget && !heroes.empty()) {
+        return heroes[0];  
     }
-    return *bestTarget;
+    return bestTarget;
 }
 
 int Enemy::attack(CharacterBase& target) {
-    int damage = stats.atk - target.getStats().def;
-    if (damage < stats.atk / 3)
-        damage = stats.atk / 3;
+    int damage = (stats.atk * 3 / 2) - target.getStats().def;
+    if (damage < stats.atk / 2)
+        damage = stats.atk / 2;
 
     Stats targetStats = target.getStats();
     targetStats.hp -= damage;
@@ -45,7 +42,3 @@ int Enemy::attack(CharacterBase& target) {
 
     return damage;
 }
-
-// int Enemy::useSkill(CharacterBase& target) {
-//     return attack(target); 
-// }
