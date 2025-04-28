@@ -12,16 +12,15 @@
 #include <map>
 #include <game/TurnSystem.h>
 
-
 void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int round)
 {
     Utils::clearScreen();
 
-    std::vector<CharacterBase*> allCharacters;
-    for (auto& hero : team.getCharacters())
-        allCharacters.push_back(const_cast<Character*>(&hero));
-    for (auto& enemy : enemies)
-        allCharacters.push_back(const_cast<Enemy*>(&enemy));
+    std::vector<CharacterBase *> allCharacters;
+    for (auto &hero : team.getCharacters())
+        allCharacters.push_back(const_cast<Character *>(&hero));
+    for (auto &enemy : enemies)
+        allCharacters.push_back(const_cast<Enemy *>(&enemy));
 
     TurnSystem turnSystem(allCharacters);
 
@@ -30,17 +29,17 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
         Utils::clearScreen();
         drawBattleState(team, enemies, wave, round);
 
-        CharacterBase* actor = turnSystem.getNextActor();
+        CharacterBase *actor = turnSystem.getNextActor();
         if (!actor)
             break;
 
         if (actor->getStats().hp <= 0)
             continue; // Dead character, skip.
 
-        if (Enemy* enemy = dynamic_cast<Enemy*>(actor))
+        if (Enemy *enemy = dynamic_cast<Enemy *>(actor))
         {
             std::vector<Character> livingHeroes;
-            for (const auto& hero : team.getCharacters())
+            for (const auto &hero : team.getCharacters())
             {
                 if (hero.getStats().hp > 0)
                     livingHeroes.push_back(hero);
@@ -52,7 +51,7 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                 break;
             }
 
-            Character& target = enemy->chooseTarget(livingHeroes);
+            Character &target = enemy->chooseTarget(livingHeroes);
             int damage = enemy->attack(target);
 
             std::cout << enemy->getName() << " attacks " << target.getName()
@@ -60,9 +59,10 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
 
             std::this_thread::sleep_for(std::chrono::milliseconds(1500));
         }
-        else if (Character* character = dynamic_cast<Character*>(actor))
+        else if (Character *character = dynamic_cast<Character *>(actor))
         {
-            std::cout << "\n" << character->getName() << "'s turn!\n";
+            std::cout << "\n"
+                      << character->getName() << "'s turn!\n";
             std::cout << "1. Attack\n";
             std::cout << "2. Skill\n";
             std::cout << "4. Quit\n";
@@ -74,9 +74,9 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
             if (choice == 1)
             {
                 // Attack choice
-                std::map<int, Enemy*> aliveEnemies;
+                std::map<int, Enemy *> aliveEnemies;
                 int idx = 1;
-                for (auto& enemy : enemies)
+                for (auto &enemy : enemies)
                 {
                     if (enemy.getStats().hp > 0)
                     {
@@ -98,7 +98,7 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
 
                 if (aliveEnemies.count(targetIndex))
                 {
-                    Enemy* target = aliveEnemies[targetIndex];
+                    Enemy *target = aliveEnemies[targetIndex];
                     int damage = character->attack(*target);
                     std::cout << character->getName() << " attacked " << target->getName()
                               << " for " << damage << " damage!\n";
@@ -124,7 +124,7 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
 
         // Check if all enemies are dead
         bool allEnemiesDefeated = true;
-        for (const auto& enemy : enemies)
+        for (const auto &enemy : enemies)
         {
             if (enemy.getStats().hp > 0)
             {
@@ -142,7 +142,7 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
     }
 }
 
-void UiBattle::drawBattleState(const Team& team, const std::vector<Enemy>& enemies, int wave, int round)
+void UiBattle::drawBattleState(const Team &team, const std::vector<Enemy> &enemies, int wave, int round)
 {
     std::cout << "\n";
     std::cout << "╔" << std::string(70, '=') << "╗\n";
@@ -158,11 +158,11 @@ void UiBattle::drawBattleState(const Team& team, const std::vector<Enemy>& enemi
 
     std::cout << "\nYour Party\n";
     std::cout << std::string(70, '-') << "\n";
-    const std::vector<Character>& heroes = team.getCharacters();
+    const std::vector<Character> &heroes = team.getCharacters();
 
-    for (const auto& hero : heroes)
+    for (const auto &hero : heroes)
     {
-        const Stats& s = hero.getStats();
+        const Stats &s = hero.getStats();
         int barLength = 15;
         int maxHp = (s.maxHp > 0) ? s.maxHp : 1;
         int filled = (s.hp * barLength) / maxHp;
@@ -178,9 +178,9 @@ void UiBattle::drawBattleState(const Team& team, const std::vector<Enemy>& enemi
 
     std::cout << "\nEnemy Team\n";
     std::cout << std::string(70, '-') << "\n";
-    for (const auto& enemy : enemies)
+    for (const auto &enemy : enemies)
     {
-        const Stats& s = enemy.getStats();
+        const Stats &s = enemy.getStats();
         int barLength = 15;
         int maxHp = (s.maxHp > 0) ? s.maxHp : 1;
         int filled = (s.hp * barLength) / maxHp;
@@ -190,7 +190,6 @@ void UiBattle::drawBattleState(const Team& team, const std::vector<Enemy>& enemi
 
         std::cout << std::setw(12) << std::left << enemy.getName()
                   << " " << enemy.getAffinity() << " HP [" << bar << "] "
-                  << s.hp << "/" << maxHp
-                  << " | CD: 0\n"; // Enemies don't use skills anymore.
+                  << s.hp << "/" << maxHp << "\n";
     }
 }

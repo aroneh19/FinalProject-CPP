@@ -20,7 +20,7 @@ private:
 
 public:
     Character()
-        : damageDealt(0), currentCooldown(0), damageThreshold(100) {}
+        : currentCooldown(0), damageDealt(0), damageThreshold(100) {}
 
     ~Character() override = default;
 
