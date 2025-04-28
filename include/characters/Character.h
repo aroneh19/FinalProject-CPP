@@ -1,6 +1,11 @@
 #pragma once
 #include "characters/CharacterBase.h"
 #include <iostream>
+#include <vector>
+#include <string>
+#include <random>
+#include <ctime>
+#include <cmath>
 
 class Character : public CharacterBase
 {
