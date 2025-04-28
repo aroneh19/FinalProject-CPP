@@ -28,7 +28,6 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
         }
     }
 
-    // Print header
     int teamCounter = 0;
     while (teamCounter < 2)
     {
@@ -37,7 +36,6 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
         std::cout << "| Nr | Champion     | Aff | HP  | ATK | DEF | SPD | LCK |\n";
         std::cout << "+----+--------------+-----+-----+-----+-----+-----+-----+\n";
 
-        // Loop through all characters
         for (size_t i = 0; i < filteredCharacters.size(); ++i)
         {
             const Character &c = filteredCharacters[i];
@@ -60,7 +58,7 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
         if (firstCharacterIndex < 1 || firstCharacterIndex > filteredCharacters.size())
         {
             std::cout << "Invalid selection. Please try again.\n";
-            continue; // Skip to the next iteration of the while loop
+            continue; 
         }
         team.addCharacter(filteredCharacters[firstCharacterIndex - 1]);
         filteredCharacters.erase(filteredCharacters.begin() + firstCharacterIndex - 1);

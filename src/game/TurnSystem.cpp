@@ -55,16 +55,3 @@ CharacterBase* TurnSystem::peekCurrentActor() const {
 void TurnSystem::reset() {
     currentIndex = 0;
 }
-
-// void TurnSystem::printTurnOrder() const {
-//     for (size_t i = 0; i < turnOrder.size(); ++i) {
-//         auto* actor = turnOrder[i].actor;
-//         if (actor) {
-//                       << " (SPD: " << actor->getStats().spd
-//                       << ", LCK: " << actor->getStats().lck
-//                       << ", Score: " << turnOrder[i].turnScore << ")\n";
-//         } else {
-//             std::cout << "  " << i + 1 << ". [Null Actor]\n";
-//         }
-//     }
-// }

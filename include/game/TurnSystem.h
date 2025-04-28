@@ -15,7 +15,6 @@ public:
     CharacterBase* getNextActor();
     CharacterBase* peekCurrentActor() const;
     void reset();
-    // void printTurnOrder() const;
 
 private:
     std::vector<TurnEntry> turnOrder;

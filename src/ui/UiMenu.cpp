@@ -19,15 +19,13 @@ void UiMenu::ShowMainMenu()
 {
     int choice = -1;
 
-    while (choice != 5)
+    while (choice != 3)
     {
         Utils::clearScreen();
         std::cout << "=== Heroes of the Abyss ===\n";
         std::cout << "1. Start New Game\n";
-        std::cout << "2. Load Game\n";
-        std::cout << "3. View Characters\n";
-        std::cout << "4. How to Play\n";
-        std::cout << "5. Exit\n";
+        std::cout << "2. View Characters\n";
+        std::cout << "3. Exit\n";
         std::cout << "Choose an option: ";
         std::cin >> choice;
 
@@ -43,15 +41,9 @@ void UiMenu::HandleInput(int choice)
         StartNewGame();
         break;
     case 2:
-        LoadGame();
-        break;
-    case 3:
         ViewCharacters();
         break;
-    case 4:
-        HowToPlay();
-        break;
-    case 5:
+    case 3:
         ExitGame();
         break;
     default:
@@ -66,11 +58,6 @@ void UiMenu::StartNewGame()
 
     BattleManager manager;
     manager.startAllWaves(team);
-}
-
-void UiMenu::LoadGame()
-{
-    std::cout << "Loading game...\n";
 }
 
 void UiMenu::ViewCharacters()
@@ -108,17 +95,6 @@ void UiMenu::ViewCharacters()
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear leftover '\n'
     std::string temp;
     std::getline(std::cin, temp);
-}
-
-void UiMenu::HowToPlay()
-{
-    Utils::clearScreen();
-    std::cout << "How to play:\n";
-    std::cout << "1. Use arrow keys to navigate.\n";
-    std::cout << "2. Press Enter to select.\n";
-    std::cout << "3. Follow the on-screen instructions.\n";
-    std::cout << "4. Have fun!\n";
-    std::cin >> std::ws;
 }
 
 void UiMenu::ExitGame()

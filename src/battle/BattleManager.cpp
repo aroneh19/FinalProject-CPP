@@ -25,7 +25,7 @@ void BattleManager::startAllWaves(Team &team)
 
 void BattleManager::runWave(int waveNumber, Team &team)
 {
-    for (int round = 1; round <= 5; ++round)  // <-- 5 rounds per wave
+    for (int round = 1; round <= 5; ++round)  
     {
         std::vector<Enemy> enemies;
         if (round < 5)
@@ -126,7 +126,7 @@ std::vector<Enemy> BattleManager::generateEnemiesForRound(int waveNumber, int ro
 std::vector<Enemy> BattleManager::generateBossForWave(int waveNumber)
 {
     JsonLoader loader;
-    std::vector<Enemy> allBosses = loader.loadBosses("data/Bosses.json"); // <<< FIX HERE
+    std::vector<Enemy> allBosses = loader.loadBosses("data/Bosses.json");
     std::vector<Enemy> filtered;
 
     for (const auto &e : allBosses) {

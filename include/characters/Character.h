@@ -43,7 +43,7 @@ public:
     {
         skill = sk;
         cooldown = sk.cooldown;
-        currentCooldown = 0; // Start with skill not ready
+        currentCooldown = 0; 
     }
     int getCurrentCooldown() const { return currentCooldown; }
     void setCurrentCooldown(int cd) { currentCooldown = cd; }
