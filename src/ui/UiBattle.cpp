@@ -65,7 +65,6 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                       << character->getName() << "'s turn!\n";
             std::cout << "1. Attack\n";
             std::cout << "2. Skill\n";
-            std::cout << "4. Quit\n";
             std::cout << "Choose an action: ";
 
             int choice;
@@ -114,11 +113,6 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
                 // Skill choice (optional future expansion)
                 std::cout << character->getName() << " tries to use a skill (not implemented yet).\n";
                 continue;
-            }
-            else if (choice == 4)
-            {
-                std::cout << "Exiting battle...\n";
-                break;
             }
         }
 
@@ -173,7 +167,7 @@ void UiBattle::drawBattleState(const Team &team, const std::vector<Enemy> &enemi
         std::cout << std::setw(12) << std::left << hero.getName()
                   << " " << hero.getAffinity() << " HP [" << bar << "] "
                   << s.hp << "/" << maxHp
-                  << " | CD: " << hero.getSkillCooldown() - hero.getCurrentCooldown() << "\n";
+                  << " | CD: " << std::to_string(hero.getSkillCooldown() - hero.getCurrentCooldown()) << "\n";
     }
 
     std::cout << "\nEnemy Team\n";

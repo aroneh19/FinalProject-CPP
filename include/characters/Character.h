@@ -20,7 +20,7 @@ private:
 
 public:
     Character()
-        : currentCooldown(0), damageDealt(0), damageThreshold(100) {}
+        : cooldown(0), currentCooldown(0), damageDealt(0), damageThreshold(100) {}
 
     ~Character() override = default;
 
@@ -38,14 +38,13 @@ public:
     }
 
     const Skill &getSkill() const { return skill; }
-    void setSkill(const Skill &sk) { skill = sk; }
+    void setSkill(const Skill &sk) { 
+        skill = sk; 
+        cooldown = sk.cooldown;
+        currentCooldown = 0; // Start with skill not ready
+    }
     int getCurrentCooldown() const { return currentCooldown; }
     void setCurrentCooldown(int cd) { currentCooldown = cd; }
-    void decrementCooldown()
-    {
-        if (currentCooldown > 0)
-            currentCooldown--;
-    }
 
     int getSkillCooldown() const { return cooldown; }
     void setSkillCooldown(int cd) { cooldown = cd; }
