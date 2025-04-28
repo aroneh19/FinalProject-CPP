@@ -183,7 +183,6 @@ Enemy JsonLoader::parseEnemy(const std::string& data) {
             skill.name = extractString(block, "name");
             skill.description = extractString(block, "description");
             skill.cooldown = extractInt(block, "cooldown");
-            e.setSkill(skill);
         }
     }
     return e;

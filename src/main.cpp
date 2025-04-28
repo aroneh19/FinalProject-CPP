@@ -1,5 +1,4 @@
 #include "ui/UiMenu.h"
-#include "game/GameManager.h"
 
 int main() {
     UiMenu menu;

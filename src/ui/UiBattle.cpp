@@ -21,10 +21,9 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
     int totalWidth = 70;
     int padding = (totalWidth - title.str().length()) / 2;
     std::cout << "║" << std::string(padding, ' ') << title.str()
-            << std::string(totalWidth - padding - title.str().length(), ' ') << "║\n";
+              << std::string(totalWidth - padding - title.str().length(), ' ') << "║\n";
 
     std::cout << "╚" << std::string(70, '=') << "╝\n";
-
 
     std::cout << "\nYour Party\n";
     std::cout << std::string(70, '-') << "\n";
@@ -42,7 +41,7 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
 
         std::cout << std::setw(12) << std::left << hero.getName()
                   << " " << hero.getAffinity() << " HP [" << bar << "] " << s.hp << "/" << maxHp
-                  << " | CD: 0\n";
+                  << " | CD: " << hero.getSkillCooldown() - hero.getCurrentCooldown() << "\n";
     }
 
     std::cout << "\nEnemy Team\n";
@@ -82,7 +81,8 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
             break;
         }
 
-        std::cout << "\n" << actor->getName() << "'s turn!\n";
+        std::cout << "\n"
+                  << actor->getName() << "'s turn!\n";
         std::cout << "1. Attack\n";
         std::cout << "2. Skill\n";
         std::cout << "4. Quit\n";

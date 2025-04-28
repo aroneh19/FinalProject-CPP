@@ -1,4 +1,5 @@
 #include "characters/Character.h"
+#include "battle/Skill.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -17,12 +18,16 @@ int Character::attack(CharacterBase &target)
 
     target.setStats(targetStats);
 
+    if (currentCooldown < cooldown) {
+        currentCooldown++;
+    }
+
     return damage;
 }
 
 int Character::useSkill(CharacterBase &target)
 {
-    if (!canUseSkill)
+    if (currentCooldown != cooldown)
     {
         std::cout << getName() << " cannot use skill yet!\n";
         return 0;
