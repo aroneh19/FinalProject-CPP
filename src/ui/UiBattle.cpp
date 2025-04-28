@@ -110,9 +110,97 @@ void UiBattle::BattleStart(Team &team, std::vector<Enemy> enemies, int wave, int
             }
             else if (choice == 2)
             {
-                // Skill choice (optional future expansion)
-                std::cout << character->getName() << " tries to use a skill (not implemented yet).\n";
-                continue;
+                // Check if skill is ready
+                if (character->getCurrentCooldown() < character->getSkillCooldown())
+                {
+                    std::cout << "Skill is not ready! ("
+                              << character->getCurrentCooldown() << "/"
+                              << character->getSkillCooldown() << " turns)\n";
+                    std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+                    continue;
+                }
+
+                // Show skill info
+                const Skill &skill = character->getSkill();
+                std::cout << "\nSkill: " << skill.name << "\n";
+                std::cout << "Description: " << skill.description << "\n";
+
+                // Get valid targets based on skill target type
+                if (skill.name == "Divine Light" || skill.name == "Chi Barrier" ||
+                    skill.name == "Divine Shield" || skill.name == "Rejuvenation")
+                {
+                    // Healing/buff skills target allies
+                    std::map<int, Character *> aliveAllies;
+                    int idx = 1;
+                    for (auto &hero : team.getCharacters())
+                    {
+                        if (hero.getStats().hp > 0)
+                        {
+                            aliveAllies[idx] = const_cast<Character *>(&hero);
+                            std::cout << idx << ". " << hero.getName()
+                                      << " (HP: " << hero.getStats().hp << ")\n";
+                            idx++;
+                        }
+                    }
+
+                    int targetIndex;
+                    std::cout << "Enter target number: ";
+                    std::cin >> targetIndex;
+
+                    if (aliveAllies.count(targetIndex))
+                    {
+                        Character *target = aliveAllies[targetIndex];
+                        int effect = character->useSkill(*target);
+                        if (effect < 0)
+                        {
+                            std::cout << character->getName() << " healed "
+                                      << target->getName() << " for " << -effect << " HP!\n";
+                        }
+                    }
+                    else
+                    {
+                        std::cout << "[Error] Invalid target!\n";
+                        continue;
+                    }
+                }
+                else
+                {
+                    // Damage skills target enemies
+                    std::map<int, Enemy *> aliveEnemies;
+                    int idx = 1;
+                    for (auto &enemy : enemies)
+                    {
+                        if (enemy.getStats().hp > 0)
+                        {
+                            aliveEnemies[idx] = const_cast<Enemy *>(&enemy);
+                            std::cout << idx << ". " << enemy.getName()
+                                      << " (HP: " << enemy.getStats().hp << ")\n";
+                            idx++;
+                        }
+                    }
+
+                    int targetIndex;
+                    std::cout << "Enter target number: ";
+                    std::cin >> targetIndex;
+
+                    if (aliveEnemies.count(targetIndex))
+                    {
+                        Enemy *target = aliveEnemies[targetIndex];
+                        int damage = character->useSkill(*target);
+                        if (damage > 0)
+                        {
+                            std::cout << character->getName() << " used "
+                                      << skill.name << " on " << target->getName()
+                                      << " for " << damage << " damage!\n";
+                        }
+                    }
+                    else
+                    {
+                        std::cout << "[Error] Invalid target!\n";
+                        continue;
+                    }
+                }
+                std::this_thread::sleep_for(std::chrono::milliseconds(1500));
             }
         }
 
