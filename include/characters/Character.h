@@ -1,5 +1,6 @@
 #pragma once
 #include "characters/CharacterBase.h"
+#include "game/AffinitySystem.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -38,8 +39,9 @@ public:
     }
 
     const Skill &getSkill() const { return skill; }
-    void setSkill(const Skill &sk) { 
-        skill = sk; 
+    void setSkill(const Skill &sk)
+    {
+        skill = sk;
         cooldown = sk.cooldown;
         currentCooldown = 0; // Start with skill not ready
     }

@@ -9,7 +9,17 @@
 
 int Character::attack(CharacterBase &target)
 {
-    int damage = stats.atk * stats.atk / target.getStats().def;
+    float affinityMultiplier = AffinitySystem::getAffinityMultiplier(this->affinity, target.getAffinity());
+    int damage = static_cast<int>(stats.atk * stats.atk / target.getStats().def * affinityMultiplier);
+
+    if (affinityMultiplier > 1.0f)
+    {
+        std::cout << "It's super effective!\n";
+    }
+    else if (affinityMultiplier < 1.0f)
+    {
+        std::cout << "It's not very effective...\n";
+    }
 
     Stats targetStats = target.getStats();
     targetStats.hp -= damage;
@@ -18,7 +28,8 @@ int Character::attack(CharacterBase &target)
 
     target.setStats(targetStats);
 
-    if (currentCooldown < cooldown) {
+    if (currentCooldown < cooldown)
+    {
         currentCooldown++;
     }
 
@@ -32,6 +43,8 @@ int Character::useSkill(CharacterBase &target)
         std::cout << getName() << " cannot use skill yet!\n";
         return 0;
     }
+
+    float affinityMultiplier = AffinitySystem::getAffinityMultiplier(this->affinity, target.getAffinity());
 
     std::cout << getName() << " uses skill: " << skill.name << "!\n";
     std::cout << "  Description: " << skill.description << "\n";
@@ -47,10 +60,19 @@ int Character::useSkill(CharacterBase &target)
         std::cout << "  Hitting " << hits << " times!\n";
         for (int i = 0; i < hits; ++i)
         {
-            int singleHit = std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def));
+            int singleHit = static_cast<int>(std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
             targetStats.hp -= singleHit;
             damage += singleHit;
             std::cout << "  Hit " << (i + 1) << " deals " << singleHit << " damage.\n";
+        }
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
         }
     }
     else if (skill.name == "Shadow Step")
@@ -58,12 +80,21 @@ int Character::useSkill(CharacterBase &target)
         int critChance = this->stats.lck + 30;
         bool isCrit = (rand() % 100) < critChance;
         int critMultiplier = isCrit ? 2 : 1;
-        damage = critMultiplier * std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def));
+        damage = static_cast<int>(critMultiplier * std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         if (isCrit)
         {
             std::cout << "  Critical Hit!\n";
         }
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Battle Hymn")
     {
@@ -74,15 +105,33 @@ int Character::useSkill(CharacterBase &target)
     {
         double hpPercent = static_cast<double>(this->stats.hp) / maxHp;
         double damageMultiplier = 1.0 + (1.0 - hpPercent) * 1.5;
-        damage = static_cast<int>(damageMultiplier * std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)));
+        damage = static_cast<int>(damageMultiplier * std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         std::cout << "  Damage multiplied by " << damageMultiplier << " due to low HP!\n";
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Soulfire Blade")
     {
-        damage = this->stats.atk + 10;
+        damage = static_cast<int>((this->stats.atk + 10) * affinityMultiplier);
         std::cout << "  Dealing " << damage << " true damage, ignoring DEF!\n";
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Rejuvenation")
     {
@@ -96,9 +145,18 @@ int Character::useSkill(CharacterBase &target)
     }
     else if (skill.name == "Arena Smash")
     {
-        damage = std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def));
+        damage = static_cast<int>(std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         targetStats.hp -= damage;
         std::cout << "  Applying minor bleed! (Needs implementation)\n";
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Divine Light")
     {
@@ -109,7 +167,7 @@ int Character::useSkill(CharacterBase &target)
     }
     else if (skill.name == "Frostbind")
     {
-        damage = std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def));
+        damage = static_cast<int>(std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         targetStats.hp -= damage;
         int freezeChance = 30 + this->stats.lck;
         if ((rand() % 100) < freezeChance)
@@ -120,16 +178,34 @@ int Character::useSkill(CharacterBase &target)
         {
             std::cout << "  Freeze attempt failed.\n";
         }
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Stone Slam")
     {
         std::cout << "  Hitting all enemies with an AoE slam! (Applying to single target)\n";
-        damage = static_cast<int>(this->stats.atk * 1.2);
+        damage = static_cast<int>(this->stats.atk * 1.2 * affinityMultiplier);
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Shield Bash")
     {
-        damage = std::max(1, (this->stats.atk / 2 + this->stats.def) * this->stats.atk / std::max(1, targetStats.def));
+        damage = static_cast<int>(std::max(1, (this->stats.atk / 2 + this->stats.def) * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         targetStats.hp -= damage;
         int stunChance = 20 + this->stats.lck;
         if ((rand() % 100) < stunChance)
@@ -140,13 +216,30 @@ int Character::useSkill(CharacterBase &target)
         {
             std::cout << "  Stun attempt failed.\n";
         }
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Arcane Storm")
     {
         std::cout << "  Hitting all enemies with an AoE blast! (Applying to single target)\n";
-        damage = static_cast<int>(this->stats.atk * 1.5);
-        damage = std::max(1, damage / std::max(1, targetStats.def / 2));
+        damage = static_cast<int>((this->stats.atk * 1.5) / std::max<int>(1, targetStats.def / 2) * affinityMultiplier);
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Chi Barrier")
     {
@@ -160,9 +253,18 @@ int Character::useSkill(CharacterBase &target)
     }
     else if (skill.name == "Inferno")
     {
-        damage = std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def));
+        damage = static_cast<int>(std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         targetStats.hp -= damage;
         std::cout << "  Target is Burning for 3 turns! (Needs implementation)\n";
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Spell Reflect")
     {
@@ -174,7 +276,7 @@ int Character::useSkill(CharacterBase &target)
         int critChance = this->stats.lck + 40;
         bool isCrit = (rand() % 100) < critChance;
         int critMultiplier = isCrit ? 2.5 : 1;
-        damage = static_cast<int>(critMultiplier * std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)));
+        damage = static_cast<int>(critMultiplier * std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
 
         if (isCrit)
         {
@@ -185,25 +287,60 @@ int Character::useSkill(CharacterBase &target)
         {
             targetStats.hp -= damage;
         }
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Heaven's Wrath")
     {
         std::cout << "  Hitting all frontline enemies! (Applying to single target)\n";
-        damage = static_cast<int>(this->stats.atk * 1.3);
-        damage = std::max(1, damage * damage / std::max(1, targetStats.def));
+        damage = static_cast<int>(std::max<int>(1, (this->stats.atk * 1.3) * (this->stats.atk * 1.3) / std::max<int>(1, targetStats.def)) * affinityMultiplier);
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else if (skill.name == "Curse of Weakness")
     {
         std::cout << "  Debuffing target ATK! (Needs implementation)\n";
-        damage = this->stats.atk / 2;
+        damage = static_cast<int>(this->stats.atk / 2 * affinityMultiplier);
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
     else
     {
         std::cout << "  Using a basic skill attack!\n";
-        damage = std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def));
+        damage = static_cast<int>(std::max(1, this->stats.atk * this->stats.atk / std::max(1, targetStats.def)) * affinityMultiplier);
         targetStats.hp -= damage;
+
+        if (affinityMultiplier > 1.0f)
+        {
+            std::cout << "It's super effective!\n";
+        }
+        else if (affinityMultiplier < 1.0f)
+        {
+            std::cout << "It's not very effective...\n";
+        }
     }
 
     if (targetStats.hp < 0)

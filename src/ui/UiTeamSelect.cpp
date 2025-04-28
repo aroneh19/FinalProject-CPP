@@ -67,9 +67,3 @@ void UiTeamSelect::displayTeams(const std::string &role, Team &team)
         teamCounter++;
     }
 }
-
-void UiTeamSelect::selectTeam(Team &team)
-{
-    int hallo;
-    std::cin >> hallo;
-}
